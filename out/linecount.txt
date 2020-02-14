@@ -1,0 +1,48 @@
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2020-02-13 20:10:01
+count workspace : c:\Users\fire_\Documents\Programs\C++ Solver
+total files : 36
+total code lines : 1936
+total comment lines : 13
+total blank lines : 43
+
+.vs\C++ Solver\v16\.suo, it is a binary file.
+.vs\C++ Solver\v16\Browse.VC.db, it is a binary file.
+.vs\C++ Solver\v16\ipch\AutoPCH\e707402ebc8dfcf\MAIN.ipch, it is a binary file.
+.vs\ProjectSettings.json, code is 3, comment is 0, blank is 0.
+.vs\slnx.sqlite, it is a binary file.
+.vs\VSWorkspaceState.json, code is 7, comment is 0, blank is 1.
+CPP Files\aas.cpp, code is 38, comment is 0, blank is 1.
+CPP Files\circle.cpp, code is 71, comment is 0, blank is 1.
+CPP Files\cube.cpp, code is 74, comment is 0, blank is 1.
+CPP Files\ellipse.cpp, code is 93, comment is 0, blank is 2.
+CPP Files\main.cpp, code is 166, comment is 0, blank is 3.
+CPP Files\parabola.cpp, code is 93, comment is 0, blank is 1.
+CPP Files\polygon.cpp, code is 88, comment is 0, blank is 1.
+CPP Files\polygon3d.cpp, code is 80, comment is 0, blank is 1.
+CPP Files\pyramid.cpp, code is 105, comment is 0, blank is 2.
+CPP Files\rectangle.cpp, code is 64, comment is 0, blank is 2.
+CPP Files\sas.cpp, code is 38, comment is 0, blank is 1.
+CPP Files\ssa.cpp, code is 38, comment is 0, blank is 3.
+CPP Files\sss.cpp, code is 38, comment is 0, blank is 1.
+CPP Files\triangle.cpp, code is 114, comment is 0, blank is 2.
+Final.pro, code is 32, comment is 0, blank is 3.
+Final.pro.user, code is 251, comment is 0, blank is 0.
+H Files\aas.h, code is 18, comment is 1, blank is 1.
+H Files\circle.h, code is 29, comment is 1, blank is 1.
+H Files\cube.h, code is 28, comment is 1, blank is 2.
+H Files\ellipse.h, code is 36, comment is 1, blank is 1.
+H Files\parabola.h, code is 36, comment is 1, blank is 1.
+H Files\polygon.h, code is 36, comment is 1, blank is 1.
+H Files\polygon3d.h, code is 28, comment is 1, blank is 1.
+H Files\pyramid.h, code is 35, comment is 1, blank is 1.
+H Files\rectangle.h, code is 29, comment is 1, blank is 1.
+H Files\sas.h, code is 18, comment is 1, blank is 1.
+H Files\ssa.h, code is 18, comment is 1, blank is 1.
+H Files\sss.h, code is 18, comment is 1, blank is 1.
+H Files\triangle.h, code is 48, comment is 1, blank is 1.
+main.cpp, code is 166, comment is 0, blank is 3.
+===============================================================================
