@@ -1,7 +1,7 @@
 #ifndef CIRCLE_H
 #define CIRCLE_H
 #include <iostream>
-#include <corecrt_math_defines.h>
+#include <math.h>
 #include <iomanip>
 #include <iterator>
 namespace circle {

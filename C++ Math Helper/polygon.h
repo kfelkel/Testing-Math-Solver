@@ -1,9 +1,9 @@
 #ifndef POLYGON_H
 #define POLYGON_H
-#include <corecrt_math_defines.h>
 #include <iostream>
 #include <iomanip>
 #include <iterator>
+#include <math.h>
 namespace polygon{
 	class Polygon{
 		public:

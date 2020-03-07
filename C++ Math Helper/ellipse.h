@@ -1,7 +1,7 @@
 #ifndef ELLIPSE_H
 #define ELLIPSE_H
 #include <iostream>
-#include <corecrt_math_defines.h>
+#include <math.h>
 #include <iomanip>
 #include <iterator>
 
