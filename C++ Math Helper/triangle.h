@@ -1,6 +1,7 @@
 #ifndef TRIANGLE_H
 #define TRIANGLE_H
 #include <iostream>
+#include <corecrt_math_defines.h>
 #include <iomanip>
 #include <iterator>
 
