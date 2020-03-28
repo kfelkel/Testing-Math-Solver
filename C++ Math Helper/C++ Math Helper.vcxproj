@@ -164,6 +164,7 @@
     <ClCompile Include="sas.cpp" />
     <ClCompile Include="ssa.cpp" />
     <ClCompile Include="sss.cpp" />
+    <ClCompile Include="TestClass.cpp" />
     <ClCompile Include="triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -179,6 +180,7 @@
     <ClInclude Include="sas.h" />
     <ClInclude Include="ssa.h" />
     <ClInclude Include="sss.h" />
+    <ClInclude Include="TestClass.h" />
     <ClInclude Include="triangle.h" />
   </ItemGroup>
   <ItemGroup>

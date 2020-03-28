@@ -1,3 +1,2 @@
-﻿  C++ Math Helper.cpp
-C:\Users\fire_\Documents\Programs\C--Math-Solver\C++ Math Helper\C++ Math Helper.cpp(167,29): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  C++ Math Helper.vcxproj -> C:\Users\fire_\Documents\Programs\C--Math-Solver\x64\Debug\C++ Math Helper.exe
+﻿  TestClass.cpp
+  C++ Math Helper.vcxproj -> C:\Users\fire_\Documents\C--Math-Solver\x64\Debug\C++ Math Helper.exe

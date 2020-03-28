@@ -6,6 +6,7 @@ namespace sas
 {
 	class SAS :public triangle::Triangle
 	{
+	friend class TestClass;
 	public:
 		SAS();
 		SAS(double, double, double);

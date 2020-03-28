@@ -9,6 +9,7 @@ namespace triangle
 {
 	class Triangle
 	{
+	friend class TestClass;
 	public:
 		Triangle();
 		Triangle(double, double, double);
@@ -42,6 +43,7 @@ namespace triangle
 		double heighta;
 		double heightb;
 		double heightc;
+		
 	private:
 		double area;
 		double perimeter;

@@ -6,6 +6,7 @@ namespace ssa
 {
 	class SSA :public triangle::Triangle
 	{
+	friend class TestClass;
 	public:
 		SSA();
 		SSA(double, double, double);
