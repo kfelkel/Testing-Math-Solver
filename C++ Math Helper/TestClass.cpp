@@ -16,22 +16,44 @@
 #include <string>
 
 void TestClass::runTests() {
+	//AAS
 	std::cout <<"AAS Angle B: " <<AASfindangleB() << std::endl;
 	std::cout <<"AAS side a: " << AASfindsidea() << std::endl;
 	std::cout <<"AAS side b: " << AASfindsideb() << std::endl;
+	//SAS
 	std::cout <<"SAS side a: " << SASfindsidea() << std::endl;
 	std::cout <<"SAS angle B: " << SASfindangleB() << std::endl;
 	std::cout <<"SAS angle C: " << SASfindangleC() << std::endl;
+	//SSA
 	std::cout <<"SSA angle C: " << SSAfindangleC() << std::endl;
 	std::cout <<"SSA angle A: " << SSAfindangleA() << std::endl;
 	std::cout <<"SSA side a: " << SSAfindsidea() << std::endl;
+	//SSS
 	std::cout <<"SSS angle A: " << SSSfindangleA() << std::endl;
 	std::cout <<"SSS angle B: " << SSSfindangleB() << std::endl;
 	std::cout <<"SSS angle C: " << SSSfindangleC() << std::endl;
+	//Triangle
+	std::cout << "Triangle Getter A: " << TriangleGetterA() << std::endl;
+	std::cout << "Triangle Getter B: " << TriangleGetterB() << std::endl;
+	std::cout << "Triangle Getter C: " << TriangleGetterC() << std::endl;
+	std::cout << "Triangle Getter a: " << TriangleGettera() << std::endl;
+	std::cout << "Triangle Getter b: " << TriangleGetterb() << std::endl;
+	std::cout << "Triangle Getter c: " << TriangleGetterc() << std::endl;
+	std::cout << "Triangle Getter Height a: " << TriangleGetterHeighta() << std::endl;
+	std::cout << "Triangle Getter Height b: " << TriangleGetterHeightb() << std::endl;
+	std::cout << "Triangle Getter Height c: " << TriangleGetterHeightc() << std::endl;
+	std::cout << "Triangle area: " << Trianglearea() << std::endl;
+	std::cout << "Triangle area: " << Triangleperimeter() << std::endl;
 	std::cout << "Triangle Height a: " << Trianglefindheighta() << std::endl;
 	std::cout << "Triangle Height b: " << Trianglefindheightb() << std::endl;
 	std::cout <<"Triangle Height c: "<< Trianglefindheightc() << std::endl;
+	//Rectangle
+	std::cout << "Rectangle length: " << Rectanglegetlength() << std::endl;
+	std::cout << "Rectangle width: " << Rectanglegetwidth() << std::endl;
+
+
 }
+//AAS
 bool TestClass::AASfindangleB() {
 	aas::AAS* aas = new aas::AAS;
 	aas->angleA = 120;
@@ -61,6 +83,7 @@ bool TestClass::AASfindsideb() {
 	delete aas;
 	return output;
 }
+//SAS
 bool TestClass::SASfindsidea() {
 	sas::SAS* sas = new sas::SAS;
 	sas->sideb = 2;
@@ -91,6 +114,7 @@ bool TestClass::SASfindangleC() {
 	delete sas;
 	return output;
 }
+//SSA
 bool TestClass::SSAfindangleC() {
 	ssa::SSA* ssa = new ssa::SSA;
 	ssa->angleB = 24;
@@ -120,6 +144,7 @@ bool TestClass::SSAfindsidea() {
 	delete ssa;
 	return output;
 }
+//SSS
 bool TestClass::SSSfindangleA() {
 	sss::SSS* sss = new sss::SSS;
 	sss->sidea = 2;
@@ -150,6 +175,87 @@ bool TestClass::SSSfindangleC() {
 	delete sss;
 	return output;
 }
+//Triangle
+bool TestClass::TriangleGetterA() {
+	triangle::Triangle* triangle = new triangle::Triangle;
+	triangle->angleA = 30;
+	bool output = (30 == triangle->gettriangleangleA());
+	delete triangle;
+	return output;
+}
+bool TestClass::TriangleGetterB() {
+	triangle::Triangle* triangle = new triangle::Triangle;
+	triangle->angleB = 30;
+	bool output = (30 == triangle->gettriangleangleB());
+	delete triangle;
+	return output;
+}
+bool TestClass::TriangleGetterC() {
+	triangle::Triangle* triangle = new triangle::Triangle;
+	triangle->angleC = 30;
+	bool output = (30 == triangle->gettriangleangleC());
+	delete triangle;
+	return output;
+}
+bool TestClass::TriangleGettera() {
+	triangle::Triangle* triangle = new triangle::Triangle;
+	triangle->sidea = 1;
+	bool output = (1 == triangle->gettrianglesidea());
+	delete triangle;
+	return output;
+}
+bool TestClass::TriangleGetterb() {
+	triangle::Triangle* triangle = new triangle::Triangle;
+	triangle->sideb = 2;
+	bool output = (2 == triangle->gettrianglesideb());
+	delete triangle;
+	return output;
+}
+bool TestClass::TriangleGetterc() {
+	triangle::Triangle* triangle = new triangle::Triangle;
+	triangle->sidec = 3;
+	bool output = (3 == triangle->gettrianglesidec());
+	delete triangle;
+	return output;
+}
+bool TestClass::TriangleGetterHeighta() {
+	triangle::Triangle* triangle = new triangle::Triangle;
+	triangle->heighta = 4;
+	bool output = (4 == triangle->gettriangleheighta());
+	delete triangle;
+	return output;
+}
+bool TestClass::TriangleGetterHeightb() {
+	triangle::Triangle* triangle = new triangle::Triangle;
+	triangle->heightb = 5;
+	bool output = (5 == triangle->gettriangleheightb());
+	delete triangle;
+	return output;
+}
+bool TestClass::TriangleGetterHeightc() {
+	triangle::Triangle* triangle = new triangle::Triangle;
+	triangle->heightc = 6;
+	bool output = (6 == triangle->gettriangleheightc());
+	delete triangle;
+	return output;
+}
+bool TestClass::Trianglearea() {
+	triangle::Triangle* triangle = new triangle::Triangle;
+	triangle->sidea = 2;
+	triangle->heighta = 3;
+	bool output = (3 == triangle->gettrianglearea());
+	delete triangle;
+	return output;
+}
+bool TestClass::Triangleperimeter() {
+	triangle::Triangle* triangle = new triangle::Triangle;
+	triangle->sidea = 1;
+	triangle->sideb = 2;
+	triangle->sidec = 3;
+	bool output = (6 == triangle->gettriangleperimeter());
+	delete triangle;
+	return output;
+}
 bool TestClass::Trianglefindheighta() {
 	triangle::Triangle* triangle = new triangle::Triangle;
 	triangle->angleB = 63;
@@ -178,6 +284,37 @@ bool TestClass::Trianglefindheightc() {
 	triangle->triangleheightc();
 	bool output = (0.9 <= triangle->gettriangleheightc() && 1.0 >= triangle->gettriangleheightc());
 	delete triangle;
+	return output;
+}
+//Rectangle
+bool TestClass::Rectanglegetlength() {
+	rectangle::Rectangle* rec = new rectangle::Rectangle;
+	rec->length = 20;
+	bool output = (20 <= rec->getrectanglelenght());
+	delete rec;
+	return output;
+}
+bool TestClass::Rectanglegetwidth() {
+	rectangle::Rectangle* rec = new rectangle::Rectangle;
+	rec->length = 33;
+	bool output = (33 <= rec->getrectanglelenght());
+	delete rec;
+	return output;
+}
+bool TestClass::Rectanglegetarea() {
+	rectangle::Rectangle* rec = new rectangle::Rectangle;
+	rec->length = 2;
+	rec->width = 3;
+	bool output = (6 <= rec->getrectanglearea());
+	delete rec;
+	return output;
+}
+bool TestClass::Rectanglegetperimeter() {
+	rectangle::Rectangle* rec = new rectangle::Rectangle;
+	rec->length = 2;
+	rec->width = 3;
+	bool output = (6 <= rec->getrectanglearea());
+	delete rec;
 	return output;
 }
 

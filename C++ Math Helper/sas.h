@@ -6,7 +6,7 @@ namespace sas
 {
 	class SAS :public triangle::Triangle
 	{
-	friend class TestClass;
+		friend class TestClass;
 	public:
 		SAS();
 		SAS(double, double, double);
@@ -15,6 +15,8 @@ namespace sas
 		void SASangleB();
 		void SASangleC();
 		friend void operator>>(std::istream&, SAS&);
+	protected:
+	private:
 	};
 }
 #endif // SAS_H

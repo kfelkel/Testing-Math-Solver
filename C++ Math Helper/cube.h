@@ -17,6 +17,7 @@ namespace cube{
 			void cubevolume();
 			friend  std::ostream& operator<<(std::ostream&, const Cube);
 			friend void operator>>(std::istream&, Cube&);
+	protected:
 		private:
 			double height;
 			double area;

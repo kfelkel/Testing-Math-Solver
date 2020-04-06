@@ -8,6 +8,7 @@ namespace rectangle
 {
 	class Rectangle
 	{
+		friend class TestClass;
 	public:
 		Rectangle();
 		Rectangle(double, double);

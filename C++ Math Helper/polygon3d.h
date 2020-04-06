@@ -17,6 +17,7 @@ namespace polygon3d{
 			void polygon3dvolume();
 			friend  std::ostream& operator<<(std::ostream&, const Polygon3D);
 			friend void operator>>(std::istream&, Polygon3D&);
+	protected:
 		private:
 			double height;
 			double area;

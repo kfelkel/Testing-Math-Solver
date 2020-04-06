@@ -23,6 +23,7 @@ namespace parabola{
 			void parabolafocus();
 			friend std::ostream& operator<<(std::ostream&, const Parabola);
 			friend void operator>>(std::istream&, Parabola&);
+		protected:
 		private:
 			double valuea;
 			double valueb;

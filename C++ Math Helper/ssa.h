@@ -15,6 +15,8 @@ namespace ssa
 		void SSAangleA();
 		void SSAsidea();
 		friend void operator>>(std::istream&, SSA&);
+	protected:
+	private:
 	};
 }
 #endif // SSA_H

@@ -15,6 +15,8 @@ namespace sss
 		void SSSangleB();
 		void SSSangleC();
 		friend void operator>>(std::istream&, SSS&);
+	protected:
+	private:
 	};
 }
 #endif // SSS_H

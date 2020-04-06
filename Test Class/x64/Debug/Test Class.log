@@ -1,0 +1,7 @@
+﻿  Test Class.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include\xlocmon(97,1): error C2059: syntax error: ';'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include\xlocmon(244): message : see reference to class template instantiation 'std::_Mpunct<_Elem>' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include\xlocmon(97,1): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include\xlocmon(97,1): error C2059: syntax error: ':'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include\xlocmon(97,1): error C2334: unexpected token(s) preceding ':'; skipping apparent function body
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include\xlocmon(20): fatal error C1075: '{': no matching token found

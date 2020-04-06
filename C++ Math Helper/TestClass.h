@@ -15,9 +15,24 @@ public:
 	bool SSSfindangleA();
 	bool SSSfindangleB();
 	bool SSSfindangleC();
+	bool TriangleGetterA();
+	bool TriangleGetterB();
+	bool TriangleGetterC();
+	bool TriangleGettera();
+	bool TriangleGetterb();
+	bool TriangleGetterc();
+	bool Trianglearea();
+	bool Triangleperimeter();
+	bool TriangleGetterHeighta();
+	bool TriangleGetterHeightb();
+	bool TriangleGetterHeightc();
 	bool Trianglefindheighta();
 	bool Trianglefindheightb();
 	bool Trianglefindheightc();
+	bool Rectanglegetlength();
+	bool Rectanglegetwidth();
+	bool Rectanglegetarea();
+	bool Rectanglegetperimeter();
 };
 
 

@@ -4,6 +4,7 @@
 
 namespace aas{
 	class AAS :public triangle::Triangle{
+		friend class TestClass;
 		public:
 			AAS();
 			AAS(double, double, double);
@@ -12,6 +13,8 @@ namespace aas{
 			void AASsidea();
 			void AASsideb();
 			friend void operator>>(std::istream&, AAS&);
+	protected:
+	private:
 	};
 }
 #endif // AAS_H
