@@ -2,7 +2,7 @@
 #define Tests_H
 class Tests {
 public:
-	void runTests();
+	//void runTests();
 	double AAS_AASangleB(double angleA, double angleC);
 	double AAS_AASsidea(double angleA, double angleC, double sidec);
 	double AAS_AASsideb(double angleA, double angleC, double sidec);
