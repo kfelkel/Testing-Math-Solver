@@ -176,113 +176,113 @@ double Tests::SSSfindangleC() {
 	return output;
 }
 //Triangle
-double Tests::TriangleGetterA() {
+double Tests::Triangle_gettriangleangleA(double angleA) {
 	triangle::Triangle* triangle = new triangle::Triangle;
-	triangle->angleA = 30;
-	double output = (triangle->gettriangleangleA());
+	triangle->angleA = angleA;
+	double output = triangle->gettriangleangleA();
 	delete triangle;
 	return output;
 }
-double Tests::TriangleGetterB() {
+double Tests::Triangle_gettriangleangleB(double angleB) {
 	triangle::Triangle* triangle = new triangle::Triangle;
-	triangle->angleB = 30;
-	double output = (triangle->gettriangleangleB());
+	triangle->angleB = angleB;
+	double output = triangle->gettriangleangleB();
 	delete triangle;
 	return output;
 }
-double Tests::TriangleGetterC() {
+double Tests::Triangle_gettriangleangleC(double angleC) {
 	triangle::Triangle* triangle = new triangle::Triangle;
-	triangle->angleC = 30;
-	double output = (triangle->gettriangleangleC());
+	triangle->angleC = angleC;
+	double output = triangle->gettriangleangleC();
 	delete triangle;
 	return output;
 }
-double Tests::TriangleGettera() {
+double Tests::Triangle_gettrianglesidea(double sidea) {
 	triangle::Triangle* triangle = new triangle::Triangle;
-	triangle->sidea = 1;
-	double output = (triangle->gettrianglesidea());
+	triangle->sidea = sidea;
+	double output = triangle->gettrianglesidea();
 	delete triangle;
 	return output;
 }
-double Tests::TriangleGetterb() {
+double Tests::Triangle_gettrianglesideb(double sideb) {
 	triangle::Triangle* triangle = new triangle::Triangle;
-	triangle->sideb = 2;
-	double output = (triangle->gettrianglesideb());
+	triangle->sideb = sideb;
+	double output = triangle->gettrianglesideb();
 	delete triangle;
 	return output;
 }
-double Tests::TriangleGetterc() {
+double Tests::Triangle_gettrianglesidec(double sidec) {
 	triangle::Triangle* triangle = new triangle::Triangle;
-	triangle->sidec = 3;
-	double output = (triangle->gettrianglesidec());
+	triangle->sidec = sidec;
+	double output = triangle->gettrianglesidec();
 	delete triangle;
 	return output;
 }
-double Tests::TriangleGetterHeighta() {
+double Tests::Triangle_gettriangleheighta(double heighta) {
 	triangle::Triangle* triangle = new triangle::Triangle;
-	triangle->heighta = 4;
-	double output = (triangle->gettriangleheighta());
+	triangle->heighta = heighta;
+	double output = triangle->gettriangleheighta();
 	delete triangle;
 	return output;
 }
-double Tests::TriangleGetterHeightb() {
+double Tests::Triangle_gettriangleheightb(double heightb) {
 	triangle::Triangle* triangle = new triangle::Triangle;
-	triangle->heightb = 5;
-	double output = (triangle->gettriangleheightb());
+	triangle->heightb = heightb;
+	double output = triangle->gettriangleheightb();
 	delete triangle;
 	return output;
 }
-double Tests::TriangleGetterHeightc() {
+double Tests::Triangle_gettriangleheightc(double heightc) {
 	triangle::Triangle* triangle = new triangle::Triangle;
-	triangle->heightc = 6;
-	double output = (triangle->gettriangleheightc());
+	triangle->heightc = heightc;
+	double output = triangle->gettriangleheightc();
 	delete triangle;
 	return output;
 }
-double Tests::Trianglearea() {
+double Tests::Triangle_gettrianglearea(double sidea, double heighta) {
 	triangle::Triangle* triangle = new triangle::Triangle;
-	triangle->sidea = 2;
-	triangle->heighta = 3;
-	double output = (triangle->gettrianglearea());
+	triangle->sidea = sidea;
+	triangle->heighta = heighta;
+	double output = triangle->gettrianglearea();
 	delete triangle;
 	return output;
 }
-double Tests::Triangleperimeter() {
+double Tests::Triangle_gettriangleperimeter(double sidea, double sideb, double sidec) {
 	triangle::Triangle* triangle = new triangle::Triangle;
-	triangle->sidea = 1;
-	triangle->sideb = 2;
-	triangle->sidec = 3;
-	double output = (triangle->gettriangleperimeter());
+	triangle->sidea = sidea;
+	triangle->sideb = sideb;
+	triangle->sidec = sidec;
+	double output = triangle->gettriangleperimeter();
 	delete triangle;
 	return output;
 }
-double Tests::Trianglefindheighta() {
+double Tests::Triangle_triangleheighta(double angleB, double angleC, double sidea) {
 	triangle::Triangle* triangle = new triangle::Triangle;
-	triangle->angleB = 63;
-	triangle->angleC = 29;
-	triangle->sidea = 4;
+	triangle->angleB = angleB;// 63;
+	triangle->angleC = angleC;// 29;
+	triangle->sidea = sidea;// 4;
 	triangle->triangleheighta();
-	double output = (1.7 <= triangle->gettriangleheighta() && 1.8 >= triangle->gettriangleheighta());
+	double output = triangle->gettriangleheighta();//(1.7 <= triangle->gettriangleheighta() && 1.8 >= triangle->gettriangleheighta());
 	delete triangle;
 	return output;
 }
-double Tests::Trianglefindheightb() {
+double Tests::Triangle_triangleheightb(double angleA, double angleB, double sideb) {
 	triangle::Triangle* triangle = new triangle::Triangle;
-	triangle->angleA = 34;
-	triangle->angleC = 29;
-	triangle->sideb = 3;
+	triangle->angleA = angleA;// 34;
+	triangle->angleB = angleB;// 29;
+	triangle->sideb = sideb;// 3;
 	triangle->triangleheightb();
-	double output = (0.9 <= triangle->gettriangleheightb() && 1.0 >= triangle->gettriangleheightb());
+	double output = triangle->gettriangleheightb();//(0.9 <= triangle->gettriangleheightb() && 1.0 >= triangle->gettriangleheightb());
 	delete triangle;
 	return output;
 }
-double Tests::Trianglefindheightc() {
+double Tests::Triangle_triangleheightc(double angleA, double angleB, double sidec) {
 	triangle::Triangle* triangle = new triangle::Triangle;
-	triangle->angleA = 34;
-	triangle->angleB = 29;
-	triangle->sidec = 3;
+	triangle->angleA = angleA;// 34;
+	triangle->angleB = angleB;// 29;
+	triangle->sidec = sidec;// 3;
 	triangle->triangleheightc();
-	double output = (0.9 <= triangle->gettriangleheightc() && 1.0 >= triangle->gettriangleheightc());
+	double output = triangle->gettriangleheightc();//(0.9 <= triangle->gettriangleheightc() && 1.0 >= triangle->gettriangleheightc());
 	delete triangle;
 	return output;
 }
