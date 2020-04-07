@@ -1,5 +1,0 @@
-﻿  pch.cpp
-  Test Class.cpp
-     Creating library C:\Users\fire_\Documents\Programs\C--Math-Solver\x64\Debug\Test Class.lib and object C:\Users\fire_\Documents\Programs\C--Math-Solver\x64\Debug\Test Class.exp
-Test Class.obj : error LNK2019: unresolved external symbol "public: double __cdecl Tests::AASfindangleB(void)" (?AASfindangleB@Tests@@QEAANXZ) referenced in function "public: void __cdecl TestClass::TestClass::AASfindangleB(void)" (?AASfindangleB@TestClass@1@QEAAXXZ)
-C:\Users\fire_\Documents\Programs\C--Math-Solver\x64\Debug\Test Class.dll : fatal error LNK1120: 1 unresolved externals
