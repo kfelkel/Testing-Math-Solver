@@ -94,20 +94,70 @@ namespace CMathHelpertests
 			double actual = test.SSS_SSSangleC(2,3,4);
 			Assert::AreEqual(expected, actual, .1);
 		}
-		TEST_METHOD(TriangleGettera)
+		TEST_METHOD(Triangle_Triangle_gettriangleangleA)
 		{
-			double expected = 1.0;
+			double expected = 60;
 			Tests test;
-			double actual = test.TriangleGettera();
-			Assert::AreEqual(expected, actual);
+			double actual = test.Triangle_gettriangleangleA(60);
+			Assert::AreEqual(expected, actual, .1);
 		}
-		TEST_METHOD(TriangleGetterb)
+		TEST_METHOD(Triangle_Triangle_gettriangleangleB)
 		{
-			double expected = 9.9;
+			double expected = 60;
 			Tests test;
-			double actual = test.TriangleGettera();
-			Assert::AreEqual(1.0, actual);
+			double actual = test.Triangle_gettriangleangleB(60);
+			Assert::AreEqual(expected, actual, .1);
 		}
+		TEST_METHOD(Triangle_Triangle_gettriangleangleC)
+		{
+			double expected = 60;
+			Tests test;
+			double actual = test.Triangle_gettriangleangleC(60);
+			Assert::AreEqual(expected, actual, .1);
+		}
+		TEST_METHOD(Triangle_Triangle_gettrianglesidea)
+		{
+			double expected = 1;
+			Tests test;
+			double actual = test.Triangle_gettrianglesidea(1);
+			Assert::AreEqual(expected, actual, .1);
+		}
+		TEST_METHOD(Triangle_Triangle_gettrianglesideb)
+		{
+			double expected = 2;
+			Tests test;
+			double actual = test.Triangle_gettrianglesideb(2);
+			Assert::AreEqual(expected, actual, .1);
+		}
+		TEST_METHOD(Triangle_Triangle_gettrianglesidec)
+		{
+			double expected = 3;
+			Tests test;
+			double actual = test.Triangle_gettrianglesidec(3);
+			Assert::AreEqual(expected, actual, .1);
+		}
+		TEST_METHOD(Triangle_Triangle_gettriangleheighta)
+		{
+			double expected = 1;
+			Tests test;
+			double actual = test.Triangle_gettriangleheighta(1);
+			Assert::AreEqual(expected, actual, .1);
+		}
+		TEST_METHOD(Triangle_Triangle_gettriangleheightb)
+		{
+			double expected = 2;
+			Tests test;
+			double actual = test.Triangle_gettriangleheightb(2);
+			Assert::AreEqual(expected, actual, .1);
+		}
+		TEST_METHOD(Triangle_Triangle_gettriangleheightc)
+		{
+			double expected = 3;
+			Tests test;
+			double actual = test.Triangle_gettriangleheightc(3);
+			Assert::AreEqual(expected, actual, .1);
+		}
+
 		TEST_METHOD(Test_Circle_circleDiameter)
 		{
 			double expected = 50;
