@@ -4,6 +4,7 @@
 
 namespace polygon3d {
 	class Polygon3D :public polygon::Polygon {
+		friend class Tests;
 	public:
 		Polygon3D();
 		Polygon3D(int, double, double);

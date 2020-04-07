@@ -6,6 +6,7 @@ namespace pyramid
 {
 	class Pyramid :public polygon::Polygon
 	{
+		friend class Tests;
 	public:
 		Pyramid();
 		Pyramid(int, double, double);

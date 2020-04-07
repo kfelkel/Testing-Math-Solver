@@ -6,6 +6,7 @@
 #include <iterator>
 namespace circle {
 	class Circle {
+		friend class Tests;
 	public:
 		Circle();
 		Circle(double);
