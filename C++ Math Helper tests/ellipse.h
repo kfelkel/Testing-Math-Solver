@@ -7,6 +7,7 @@
 
 namespace ellipse {
 	class Ellipse {
+		friend class Tests;
 	public:
 		Ellipse();
 		Ellipse(double, double);

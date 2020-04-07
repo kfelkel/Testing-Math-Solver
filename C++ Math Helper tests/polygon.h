@@ -6,6 +6,7 @@
 #include <iterator>
 namespace polygon {
 	class Polygon {
+		friend class Tests;
 	public:
 		Polygon();
 		Polygon(int, double);

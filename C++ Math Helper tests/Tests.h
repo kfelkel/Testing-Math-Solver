@@ -33,6 +33,8 @@ public:
 	double Rectanglegetwidth();
 	double Rectanglegetarea();
 	double Rectanglegetperimeter();
+	double Circle_getcirclediameter(double radius);
+	double Circle_getcirclecircumference(double radius);
 };
 #endif // Tests_H
 

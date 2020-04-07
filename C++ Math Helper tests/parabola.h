@@ -7,6 +7,7 @@
 
 namespace parabola {
 	class Parabola {
+		friend class Tests;
 	public:
 		Parabola();
 		Parabola(double, double, double);

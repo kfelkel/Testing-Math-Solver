@@ -314,5 +314,16 @@ double Tests::Rectanglegetperimeter() {
 	delete rec;
 	return output;
 }
-
-
+//Circle
+double Tests::Circle_getcirclediameter(double radius) {
+	circle::Circle circ;
+	circ.radius = radius;
+	double output = circ.getcirclediameter();
+	return output;
+}
+double Tests::Circle_getcirclecircumference(double radius) {
+	circle::Circle circ;
+	circ.radius = radius;
+	double output = circ.getcirclecircumference();
+	return output;
+}

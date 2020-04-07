@@ -4,6 +4,7 @@
 
 namespace cube {
 	class Cube :public rectangle::Rectangle {
+		friend class Tests;
 	public:
 		Cube();
 		Cube(double, double, double);
