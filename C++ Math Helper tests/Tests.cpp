@@ -141,7 +141,7 @@ double Tests::SSAfindsidea() {
 	ssa->angleC = 66;
 	ssa->sidec = 3;
 	ssa->SSAsidea();
-	double output = (1.3 <= ssa->gettrianglesidea() && 1.4 >= ssa->gettrianglesidea());
+	double output = (ssa->gettrianglesidea());
 	delete ssa;
 	return output;
 }
@@ -152,7 +152,7 @@ double Tests::SSSfindangleA() {
 	sss->sideb = 3;
 	sss->sidec = 4;
 	sss->SSSangleA();
-	double output = (28.9 <= sss->gettriangleangleA() && 29 >= sss->gettriangleangleA());
+	double output = (sss->gettriangleangleA());
 	delete sss;
 	return output;
 }
@@ -162,7 +162,7 @@ double Tests::SSSfindangleB() {
 	sss->sideb = 3;
 	sss->sidec = 4;
 	sss->SSSangleB();
-	double output = (46.5 <= sss->gettriangleangleB() && 46.6 >= sss->gettriangleangleB());
+	double output = (sss->gettriangleangleB());
 	delete sss;
 	return output;
 }
@@ -172,7 +172,7 @@ double Tests::SSSfindangleC() {
 	sss->sideb = 3;
 	sss->sidec = 4;
 	sss->SSSangleC();
-	double output = (104.4 <= sss->gettriangleangleC() && 104.5 >= sss->gettriangleangleC());
+	double output = (sss->gettriangleangleC());
 	delete sss;
 	return output;
 }
@@ -180,63 +180,63 @@ double Tests::SSSfindangleC() {
 double Tests::TriangleGetterA() {
 	triangle::Triangle* triangle = new triangle::Triangle;
 	triangle->angleA = 30;
-	double output = (30 == triangle->gettriangleangleA());
+	double output = (triangle->gettriangleangleA());
 	delete triangle;
 	return output;
 }
 double Tests::TriangleGetterB() {
 	triangle::Triangle* triangle = new triangle::Triangle;
 	triangle->angleB = 30;
-	double output = (30 == triangle->gettriangleangleB());
+	double output = (triangle->gettriangleangleB());
 	delete triangle;
 	return output;
 }
 double Tests::TriangleGetterC() {
 	triangle::Triangle* triangle = new triangle::Triangle;
 	triangle->angleC = 30;
-	double output = (30 == triangle->gettriangleangleC());
+	double output = (triangle->gettriangleangleC());
 	delete triangle;
 	return output;
 }
 double Tests::TriangleGettera() {
 	triangle::Triangle* triangle = new triangle::Triangle;
 	triangle->sidea = 1;
-	double output = (1 == triangle->gettrianglesidea());
+	double output = (triangle->gettrianglesidea());
 	delete triangle;
 	return output;
 }
 double Tests::TriangleGetterb() {
 	triangle::Triangle* triangle = new triangle::Triangle;
 	triangle->sideb = 2;
-	double output = (2 == triangle->gettrianglesideb());
+	double output = (triangle->gettrianglesideb());
 	delete triangle;
 	return output;
 }
 double Tests::TriangleGetterc() {
 	triangle::Triangle* triangle = new triangle::Triangle;
 	triangle->sidec = 3;
-	double output = (3 == triangle->gettrianglesidec());
+	double output = (triangle->gettrianglesidec());
 	delete triangle;
 	return output;
 }
 double Tests::TriangleGetterHeighta() {
 	triangle::Triangle* triangle = new triangle::Triangle;
 	triangle->heighta = 4;
-	double output = (4 == triangle->gettriangleheighta());
+	double output = (triangle->gettriangleheighta());
 	delete triangle;
 	return output;
 }
 double Tests::TriangleGetterHeightb() {
 	triangle::Triangle* triangle = new triangle::Triangle;
 	triangle->heightb = 5;
-	double output = (5 == triangle->gettriangleheightb());
+	double output = (triangle->gettriangleheightb());
 	delete triangle;
 	return output;
 }
 double Tests::TriangleGetterHeightc() {
 	triangle::Triangle* triangle = new triangle::Triangle;
 	triangle->heightc = 6;
-	double output = (6 == triangle->gettriangleheightc());
+	double output = (triangle->gettriangleheightc());
 	delete triangle;
 	return output;
 }
@@ -244,7 +244,7 @@ double Tests::Trianglearea() {
 	triangle::Triangle* triangle = new triangle::Triangle;
 	triangle->sidea = 2;
 	triangle->heighta = 3;
-	double output = (3 == triangle->gettrianglearea());
+	double output = (triangle->gettrianglearea());
 	delete triangle;
 	return output;
 }
@@ -253,7 +253,7 @@ double Tests::Triangleperimeter() {
 	triangle->sidea = 1;
 	triangle->sideb = 2;
 	triangle->sidec = 3;
-	double output = (6 == triangle->gettriangleperimeter());
+	double output = (triangle->gettriangleperimeter());
 	delete triangle;
 	return output;
 }
