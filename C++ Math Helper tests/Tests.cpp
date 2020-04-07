@@ -16,137 +16,99 @@
 #include "parabola.h"
 #include <string>
 
-void Tests::runTests() {
-	//AAS
-	std::cout << "AAS Angle B: " << AASfindangleB() << std::endl;
-	std::cout << "AAS side a: " << AASfindsidea() << std::endl;
-	std::cout << "AAS side b: " << AASfindsideb() << std::endl;
-	//SAS
-	std::cout << "SAS side a: " << SASfindsidea() << std::endl;
-	std::cout << "SAS angle B: " << SASfindangleB() << std::endl;
-	std::cout << "SAS angle C: " << SASfindangleC() << std::endl;
-	//SSA
-	std::cout << "SSA angle C: " << SSAfindangleC() << std::endl;
-	std::cout << "SSA angle A: " << SSAfindangleA() << std::endl;
-	std::cout << "SSA side a: " << SSAfindsidea() << std::endl;
-	//SSS
-	std::cout << "SSS angle A: " << SSSfindangleA() << std::endl;
-	std::cout << "SSS angle B: " << SSSfindangleB() << std::endl;
-	std::cout << "SSS angle C: " << SSSfindangleC() << std::endl;
-	//Triangle
-	std::cout << "Triangle Getter A: " << TriangleGetterA() << std::endl;
-	std::cout << "Triangle Getter B: " << TriangleGetterB() << std::endl;
-	std::cout << "Triangle Getter C: " << TriangleGetterC() << std::endl;
-	std::cout << "Triangle Getter a: " << TriangleGettera() << std::endl;
-	std::cout << "Triangle Getter b: " << TriangleGetterb() << std::endl;
-	std::cout << "Triangle Getter c: " << TriangleGetterc() << std::endl;
-	std::cout << "Triangle Getter Height a: " << TriangleGetterHeighta() << std::endl;
-	std::cout << "Triangle Getter Height b: " << TriangleGetterHeightb() << std::endl;
-	std::cout << "Triangle Getter Height c: " << TriangleGetterHeightc() << std::endl;
-	std::cout << "Triangle area: " << Trianglearea() << std::endl;
-	std::cout << "Triangle area: " << Triangleperimeter() << std::endl;
-	std::cout << "Triangle Height a: " << Trianglefindheighta() << std::endl;
-	std::cout << "Triangle Height b: " << Trianglefindheightb() << std::endl;
-	std::cout << "Triangle Height c: " << Trianglefindheightc() << std::endl;
-	//Rectangle
-	std::cout << "Rectangle length: " << Rectanglegetlength() << std::endl;
-	std::cout << "Rectangle width: " << Rectanglegetwidth() << std::endl;
-
-
-}
 //AAS
-double Tests::AASfindangleB() {
+double Tests::AAS_AASangleB(double angleA, double angleC) {
 	aas::AAS* aas = new aas::AAS;
-	aas->angleA = 120;
-	aas->angleC = 10;
+	aas->angleA = angleA;
+	aas->angleC = angleC;
 	aas->AASangleB();
 	double output = (aas->gettriangleangleB());
 	delete aas;
 	return output;
 }
-double Tests::AASfindsidea() {
+double Tests::AAS_AASsidea(double angleA, double angleC, double sidec) {
 	aas::AAS* aas = new aas::AAS;
-	aas->angleA = 120;
-	aas->angleC = 10;
-	aas->sidec = 2;
+	aas->angleA = angleA;
+	aas->angleC = angleC;
+	aas->sidec = sidec;
 	aas->AASsidea();
 	double output = (aas->gettrianglesidea());
 	delete aas;
 	return output;
 }
-double Tests::AASfindsideb() {
+double Tests::AAS_AASsideb(double angleA, double angleC, double sidec) {
 	aas::AAS* aas = new aas::AAS;
-	aas->angleB = 120;
-	aas->angleC = 10;
-	aas->sidec = 2;
+	aas->angleB = angleA;
+	aas->angleC = angleC;
+	aas->sidec = sidec;
 	aas->AASsideb();
 	double output = (aas->gettrianglesideb());
 	delete aas;
 	return output;
 }
 //SAS
-double Tests::SASfindsidea() {
+double Tests::SAS_SASsidea(double sideb, double sidec, double angleA) {
 	sas::SAS* sas = new sas::SAS;
-	sas->sideb = 2;
-	sas->sidec = 3;
-	sas->angleA = 47;
+	sas->sideb = sideb;
+	sas->sidec = sidec;
+	sas->angleA = angleA;
 	sas->SASsidea();
 	double output = (sas->gettrianglesidea());
 	delete sas;
 	return output;
 }
-double Tests::SASfindangleB() {
+double Tests::SAS_SASangleB(double sidea, double sideb, double sidec) {
 	sas::SAS* sas = new sas::SAS;
-	sas->sidea = 4;
-	sas->sideb = 2;
-	sas->sidec = 3;
+	sas->sidea = sidea;
+	sas->sideb = sideb;
+	sas->sidec = sidec;
 	sas->SASangleB();
 	double output = (sas->gettriangleangleB());
 	delete sas;
 	return output;
 }
-double Tests::SASfindangleC() {
+double Tests::SAS_SASangleC(double sidea, double sideb, double sidec) {
 	sas::SAS* sas = new sas::SAS;
-	sas->sidea = 4;
-	sas->sideb = 2;
-	sas->sidec = 3;
+	sas->sidea = sidea;
+	sas->sideb = sideb;
+	sas->sidec = sidec;
 	sas->SASangleC();
 	double output = (sas->gettriangleangleC());
 	delete sas;
 	return output;
 }
 //SSA
-double Tests::SSAfindangleC() {
+double Tests::SSA_SSAangleC(double angleB, double sideb, double sidec) {
 	ssa::SSA* ssa = new ssa::SSA;
-	ssa->angleB = 24;
-	ssa->sideb = 2;
-	ssa->sidec = 3;
+	ssa->angleB = angleB;
+	ssa->sideb = sideb;
+	ssa->sidec = sidec;
 	ssa->SSAangleC();
 	double output = (ssa->gettriangleangleC());
 	delete ssa;
 	return output;
 }
-double Tests::SSAfindangleA() {
+double Tests::SSA_SSAangleA(double angleB, double angleC) {
 	ssa::SSA* ssa = new ssa::SSA;
-	ssa->angleB = 24;
-	ssa->angleC = 66;
+	ssa->angleB = angleB;
+	ssa->angleC = angleC;
 	ssa->SSAangleA();
 	double output = (ssa->gettriangleangleA());
 	delete ssa;
 	return output;
 }
-double Tests::SSAfindsidea() {
+double Tests::SSA_SSAsidea(double angleA, double angleC, double sidec) {
 	ssa::SSA* ssa = new ssa::SSA;
-	ssa->angleA = 24;
-	ssa->angleC = 66;
-	ssa->sidec = 3;
+	ssa->angleA = angleA;
+	ssa->angleC = angleC;
+	ssa->sidec = sidec;
 	ssa->SSAsidea();
 	double output = (ssa->gettrianglesidea());
 	delete ssa;
 	return output;
 }
 //SSS
-double Tests::SSSfindangleA() {
+double Tests::SSS_SSSangleA(double sidea, double sideb, double sidec) {
 	sss::SSS* sss = new sss::SSS;
 	sss->sidea = 2;
 	sss->sideb = 3;
@@ -156,7 +118,7 @@ double Tests::SSSfindangleA() {
 	delete sss;
 	return output;
 }
-double Tests::SSSfindangleB() {
+double Tests::SSS_SSSangleB(double sidea, double sideb, double sidec) {
 	sss::SSS* sss = new sss::SSS;
 	sss->sidea = 2;
 	sss->sideb = 3;
@@ -166,7 +128,7 @@ double Tests::SSSfindangleB() {
 	delete sss;
 	return output;
 }
-double Tests::SSSfindangleC() {
+double Tests::SSS_SSSangleC(double sidea, double sideb, double sidec) {
 	sss::SSS* sss = new sss::SSS;
 	sss->sidea = 2;
 	sss->sideb = 3;

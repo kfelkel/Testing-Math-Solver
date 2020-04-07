@@ -3,18 +3,18 @@
 class Tests {
 public:
 	void runTests();
-	double AASfindangleB();
-	double AASfindsidea();
-	double AASfindsideb();
-	double SASfindsidea();
-	double SASfindangleB();
-	double SASfindangleC();
-	double SSAfindangleC();
-	double SSAfindangleA();
-	double SSAfindsidea();
-	double SSSfindangleA();
-	double SSSfindangleB();
-	double SSSfindangleC();
+	double AAS_AASangleB(double angleA, double angleC);
+	double AAS_AASsidea(double angleA, double angleC, double sidec);
+	double AAS_AASsideb(double angleA, double angleC, double sidec);
+	double SAS_SASsidea(double sideb, double sidec, double angleA);
+	double SAS_SASangleB(double sidea, double sideb, double sidec);
+	double SAS_SASangleC(double sidea, double sideb, double sidec);
+	double SSA_SSAangleC(double angleB, double sideb, double sidec);
+	double SSA_SSAangleA(double angleB, double angleC);
+	double SSA_SSAsidea(double angleA, double angleC, double sidec);
+	double SSS_SSSangleA(double sidea, double sideb, double sidec);
+	double SSS_SSSangleB(double sidea, double sideb, double sidec);
+	double SSS_SSSangleC(double sidea, double sideb, double sidec);
 	double TriangleGetterA();
 	double TriangleGetterB();
 	double TriangleGetterC();

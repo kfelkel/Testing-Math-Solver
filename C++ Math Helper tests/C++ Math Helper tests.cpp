@@ -10,90 +10,104 @@ namespace CMathHelpertests
 	{
 	public:
 		
-		TEST_METHOD(AASfindangleB)
+		TEST_METHOD(Test_AAS_AASangleB)
 		{
+			double expected = 50;
 			Tests test;
-			double actual = test.AASfindangleB();
-			Assert::AreEqual(50.0, actual);
+			double actual = test.AAS_AASangleB(120,10);
+			Assert::AreEqual(expected, actual);
 		}
 		TEST_METHOD(AASfindsidea)
 		{
+			double expected = 9.9;
 			Tests test;
-			double actual = test.AASfindsidea();
-			Assert::AreEqual(9.9, actual,.1);
+			double actual = test.AAS_AASsidea(120,10,2);
+			Assert::AreEqual(expected, actual,.1);
 		}
-		TEST_METHOD(AASfindsideb)
+		TEST_METHOD(Test_AAS_AASsidea)
 		{
+			double expected = 9.9;
 			Tests test;
-			double actual = test.AASfindsideb();
-			Assert::AreEqual(9.9, actual, .1);
+			double actual = test.AAS_AASsideb(120, 10, 2);
+			Assert::AreEqual(expected, actual, .1);
 		}
-		TEST_METHOD(SASfindsidea)
+		TEST_METHOD(Test_SAS_SASsidea)
 		{
+			double expected = 2.1;
 			Tests test;
-			double actual = test.SASfindsidea();
-			Assert::AreEqual(2.1, actual, .1);
+			double actual = test.SAS_SASsidea(2,3,47);
+			Assert::AreEqual(expected, actual, .1);
 		}
-		TEST_METHOD(SASfindangleB)
+		TEST_METHOD(Test_SAS_SASangleB)
 		{
+			double expected = 28.9;
 			Tests test;
-			double actual = test.SASfindangleB();
-			Assert::AreEqual(28.9, actual, .1);
+			double actual = test.SAS_SASangleB(4,2,3);
+			Assert::AreEqual(expected, actual, .1);
 		}
-		TEST_METHOD(SASfindangleC)
+		TEST_METHOD(Test_SAS_SASangleC)
 		{
+			double expected = 46.5;
 			Tests test;
-			double actual = test.SASfindangleC();
-			Assert::AreEqual(46.5, actual, .1);
+			double actual = test.SAS_SASangleC(4,2,3);
+			Assert::AreEqual(expected, actual, .1);
 		}
-		TEST_METHOD(SSAfindangleC)
+		TEST_METHOD(Test_SSA_SSAangleC)
 		{
+			double expected = 37.5;
 			Tests test;
-			double actual = test.SSAfindangleC();
-			Assert::AreEqual(37.5, actual, .1);
+			double actual = test.SSA_SSAangleC(24,2,3);
+			Assert::AreEqual(expected, actual, .1);
 		}
-		TEST_METHOD(SSAfindangleA)
+		TEST_METHOD(Test_SSA_SSAangleA)
 		{
+			double expected = 90.0;
 			Tests test;
-			double actual = test.SSAfindangleA();
-			Assert::AreEqual(90.0, actual, .1);
+			double actual = test.SSA_SSAangleA(24,66);
+			Assert::AreEqual(expected, actual, .1);
 		}
-		TEST_METHOD(SSAfindsidea)
+		TEST_METHOD(Test_SSA_SSAsidea)
 		{
+			double expected = 1.3;
 			Tests test;
-			double actual = test.SSAfindsidea();
-			Assert::AreEqual(1.3, actual, .1);
+			double actual = test.SSA_SSAsidea(24,66,3);
+			Assert::AreEqual(expected, actual, .1);
 		}
-		TEST_METHOD(SSSfindangleA)
+		TEST_METHOD(Test_SSS_SSSangleA)
 		{
+			double expected = 28.9;
 			Tests test;
-			double actual = test.SSSfindangleA();
-			Assert::AreEqual(28.9, actual, .1);
+			double actual = test.SSS_SSSangleA(2,3,4);
+			Assert::AreEqual(expected, actual, .1);
 		}
-		TEST_METHOD(SSSfindangleB)
+		TEST_METHOD(Test_SSS_SSSangleB)
 		{
+			double expected = 46.5;
 			Tests test;
-			double actual = test.SSSfindangleB();
-			Assert::AreEqual(46.5, actual, .1);
+			double actual = test.SSS_SSSangleB(2,3,4);
+			Assert::AreEqual(expected, actual, .1);
 		}
-		TEST_METHOD(SSSfindangleC)
+		TEST_METHOD(Test_SSS_SSSangleC)
 		{
+			double expected = 104.4;
 			Tests test;
-			double actual = test.SSSfindangleC();
-			Assert::AreEqual(104.4, actual, .1);
+			double actual = test.SSS_SSSangleC(2,3,4);
+			Assert::AreEqual(expected, actual, .1);
 		}
 		TEST_METHOD(TriangleGettera)
 		{
+			double expected = 1.0;
+			Tests test;
+			double actual = test.TriangleGettera();
+			Assert::AreEqual(expected, actual);
+		}
+		TEST_METHOD(TriangleGetterb)
+		{
+			double expected = 9.9;
 			Tests test;
 			double actual = test.TriangleGettera();
 			Assert::AreEqual(1.0, actual);
 		}
-		TEST_METHOD(TriangleGetterb)
-		{
-			Tests test;
-			double actual = test.TriangleGettera();
-			Assert::AreEqual(1.0, actual);
-
 		TEST_METHOD(Test_Circle_circleDiameter)
 		{
 			double expected = 50;
