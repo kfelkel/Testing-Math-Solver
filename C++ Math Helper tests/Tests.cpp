@@ -16,6 +16,43 @@
 #include "parabola.h"
 #include <string>
 
+//void Tests::runTests() {
+	//AAS
+	// std::cout << "AAS Angle B: " << AASfindangleB() << std::endl;
+	// std::cout << "AAS side a: " << AASfindsidea() << std::endl;
+	// std::cout << "AAS side b: " << AASfindsideb() << std::endl;
+	// //SAS
+	// std::cout << "SAS side a: " << SASfindsidea() << std::endl;
+	// std::cout << "SAS angle B: " << SASfindangleB() << std::endl;
+	// std::cout << "SAS angle C: " << SASfindangleC() << std::endl;
+	// //SSA
+	// std::cout << "SSA angle C: " << SSAfindangleC() << std::endl;
+	// std::cout << "SSA angle A: " << SSAfindangleA() << std::endl;
+	// std::cout << "SSA side a: " << SSAfindsidea() << std::endl;
+	// //SSS
+	// std::cout << "SSS angle A: " << SSSfindangleA() << std::endl;
+	// std::cout << "SSS angle B: " << SSSfindangleB() << std::endl;
+	// std::cout << "SSS angle C: " << SSSfindangleC() << std::endl;
+	// //Triangle
+	// std::cout << "Triangle Getter A: " << TriangleGetterA() << std::endl;
+	// std::cout << "Triangle Getter B: " << TriangleGetterB() << std::endl;
+	// std::cout << "Triangle Getter C: " << TriangleGetterC() << std::endl;
+	// std::cout << "Triangle Getter a: " << TriangleGettera() << std::endl;
+	// std::cout << "Triangle Getter b: " << TriangleGetterb() << std::endl;
+	// std::cout << "Triangle Getter c: " << TriangleGetterc() << std::endl;
+	// std::cout << "Triangle Getter Height a: " << TriangleGetterHeighta() << std::endl;
+	// std::cout << "Triangle Getter Height b: " << TriangleGetterHeightb() << std::endl;
+	// std::cout << "Triangle Getter Height c: " << TriangleGetterHeightc() << std::endl;
+	// std::cout << "Triangle area: " << Trianglearea() << std::endl;
+	// std::cout << "Triangle area: " << Triangleperimeter() << std::endl;
+	// std::cout << "Triangle Height a: " << Trianglefindheighta() << std::endl;
+	// std::cout << "Triangle Height b: " << Trianglefindheightb() << std::endl;
+	// std::cout << "Triangle Height c: " << Trianglefindheightc() << std::endl;
+	// //Rectangle
+	// std::cout << "Rectangle length: " << Rectanglegetlength() << std::endl;
+	// std::cout << "Rectangle width: " << Rectanglegetwidth() << std::endl;
+//}
+
 //AAS
 double Tests::AAS_AASangleB(double angleA, double angleC) {
 	aas::AAS* aas = new aas::AAS;
@@ -250,29 +287,33 @@ double Tests::Trianglefindheightc() {
 	return output;
 }
 //Rectangle
-double Tests::Rectanglegetlength() {
-	return 0;
-}
-double Tests::Rectanglegetwidth() {
+double Tests::Rectangle_getrectanglelength(double length) {
 	rectangle::Rectangle* rec = new rectangle::Rectangle;
-	rec->length = 33;
-	double output = (33 <= rec->getrectanglelenght());
+	rec->length = length;
+	double output = rec->getrectanglelenght();
 	delete rec;
 	return output;
 }
-double Tests::Rectanglegetarea() {
+double Tests::Rectangle_getrectanglewidth(double width) {
 	rectangle::Rectangle* rec = new rectangle::Rectangle;
-	rec->length = 2;
-	rec->width = 3;
-	double output = (6 <= rec->getrectanglearea());
+	rec->width = width;
+	double output = rec->getrectanglewidth();
 	delete rec;
 	return output;
 }
-double Tests::Rectanglegetperimeter() {
+double Tests::Rectangle_getrectanglearea(double length, double width) {
 	rectangle::Rectangle* rec = new rectangle::Rectangle;
-	rec->length = 2;
-	rec->width = 3;
-	double output = (6 <= rec->getrectanglearea());
+	rec->length = length;
+	rec->width = width;
+	double output = rec->getrectanglearea();
+	delete rec;
+	return output;
+}
+double Tests::Rectangle_getrectangleperimeter(double length, double width) {
+	rectangle::Rectangle* rec = new rectangle::Rectangle;
+	rec->length = length;
+	rec->width = width;
+	double output = rec->getrectangleperimeter();
 	delete rec;
 	return output;
 }

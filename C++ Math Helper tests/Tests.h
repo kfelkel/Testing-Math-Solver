@@ -29,10 +29,10 @@ public:
 	double Trianglefindheighta();
 	double Trianglefindheightb();
 	double Trianglefindheightc();
-	double Rectanglegetlength();
-	double Rectanglegetwidth();
-	double Rectanglegetarea();
-	double Rectanglegetperimeter();
+	double Rectangle_getrectanglelength(double length);
+	double Rectangle_getrectanglewidth(double width);
+	double Rectangle_getrectanglearea(double length, double width);
+	double Rectangle_getrectangleperimeter(double length, double width);
 	double Circle_getcirclediameter(double radius);
 	double Circle_getcirclecircumference(double radius);
 };
