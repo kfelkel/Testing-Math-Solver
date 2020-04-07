@@ -93,6 +93,7 @@ namespace CMathHelpertests
 			Tests test;
 			double actual = test.TriangleGettera();
 			Assert::AreEqual(1.0, actual);
+		}
 
 		TEST_METHOD(Test_Circle_circleDiameter)
 		{
