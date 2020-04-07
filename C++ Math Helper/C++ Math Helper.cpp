@@ -13,12 +13,12 @@
 #include "ellipse.h"
 #include "parabola.h"
 #include <string>
-#include "TestClass.h"
+#include "Tests.h"
 using namespace std;
 
 int main(){
 	int exit = 0;
-	TestClass m;
+	Tests m;
 	m.runTests();
 	//do{
 	//	system("CLS");

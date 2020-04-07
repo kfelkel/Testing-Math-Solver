@@ -4,7 +4,7 @@
 
 namespace aas{
 	class AAS :public triangle::Triangle{
-		friend class TestClass;
+		friend class Tests;
 		public:
 			AAS();
 			AAS(double, double, double);

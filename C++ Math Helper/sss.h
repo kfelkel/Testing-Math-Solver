@@ -6,7 +6,7 @@ namespace sss
 {
 	class SSS :public triangle::Triangle
 	{
-	friend class TestClass;
+	friend class Tests;
 	public:
 		SSS();
 		SSS(double, double, double);

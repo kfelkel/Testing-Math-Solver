@@ -9,7 +9,7 @@ namespace triangle
 {
 	class Triangle
 	{
-	friend class TestClass;
+	friend class Tests;
 	public:
 		Triangle();
 		Triangle(double, double, double);
