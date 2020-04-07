@@ -266,10 +266,10 @@ double Tests::Triangle_triangleheighta(double angleB, double angleC, double side
 	delete triangle;
 	return output;
 }
-double Tests::Triangle_triangleheightb(double angleA, double angleB, double sideb) {
+double Tests::Triangle_triangleheightb(double angleA, double angleC, double sideb) {
 	triangle::Triangle* triangle = new triangle::Triangle;
 	triangle->angleA = angleA;// 34;
-	triangle->angleB = angleB;// 29;
+	triangle->angleC = angleC;// 29;
 	triangle->sideb = sideb;// 3;
 	triangle->triangleheightb();
 	double output = triangle->gettriangleheightb();//(0.9 <= triangle->gettriangleheightb() && 1.0 >= triangle->gettriangleheightb());

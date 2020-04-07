@@ -177,7 +177,7 @@ namespace CMathHelpertests
 			Assert::AreEqual(expected, actual, 0.1);
 		}
 		TEST_METHOD(Test_Triangle_triangleheightb){
-			double expected = 0.9;
+			double expected = .9;
 			Tests test;
 			double actual = test.Triangle_triangleheightb(34, 29, 3);
 			Assert::AreEqual(expected, actual, 0.1);
