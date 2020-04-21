@@ -330,3 +330,16 @@ double Tests::Circle_getcirclecircumference(double radius) {
 	double output = circ.getcirclecircumference();
 	return output;
 }
+
+double Tests::Circle_getcircleradius(double radius) {
+	circle::Circle circ(radius);
+	double output = circ.getcircleradius();
+	return output;
+}
+
+double Tests::Circle_getcirclearea(double radius) {
+	circle::Circle circ;
+	circ.radius = radius;
+	double output = circ.getcirclearea();
+	return output;
+}

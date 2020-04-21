@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "CppUnitTest.h"
 #include "Tests.h"
-#include <corecrt_math_defines.h>
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace CMathHelpertests
@@ -9,6 +8,7 @@ namespace CMathHelpertests
 	TEST_CLASS(CMathHelpertests)
 	{
 	public:
+		const double pi = 3.14159;
 		
 		TEST_METHOD(Test_AAS_AASangleB)
 		{
@@ -224,9 +224,24 @@ namespace CMathHelpertests
 		}
 		TEST_METHOD(Test_Circle_getcirclecircumference)
 		{
-			double expected = 50*M_PI;
+			double expected = 50*pi;
 			Tests test;
 			double actual = test.Circle_getcirclecircumference(25);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Circle_circleradius)
+		{
+			double expected = 35;
+			Tests test;
+			double actual = test.Circle_getcircleradius(35);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Circle_getcirclearea)
+		{
+			int radius = 12;
+			double expected = radius * radius * pi;
+			Tests test;
+			double actual = test.Circle_getcirclearea(radius);
 			Assert::AreEqual(expected, actual, 0.1);
 		}
 	};
