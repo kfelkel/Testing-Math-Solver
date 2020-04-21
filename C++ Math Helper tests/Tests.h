@@ -41,6 +41,22 @@ public:
 	//Circle
 	double Circle_getcirclediameter(double radius);
 	double Circle_getcirclecircumference(double radius);
+	double Circle_getcircleradius(double radius);
+	double Circle_getcirclearea(double radius);
+	//Ellipse
+	//Ellipse();
+	//Ellipse(double, double);
+	//double Ellipse_getellipsemajoraxis();
+	//double Ellipse_getellipseminoraxis();
+	//double Ellipse_getellipsefoci();
+	//double Ellipse_getellipsedirectrix();
+	//double Ellipse_getellipsevertex();
+	//double Ellipse_getellipsearea();
+	//void ellipsesolve();
+	//void ellipsefoci();
+	//void ellipsedirectrix();
+	//void ellipsevertex();
+	//void ellipsearea();
 		//To-Do
 };
 #endif // Tests_H
