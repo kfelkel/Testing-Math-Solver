@@ -251,6 +251,57 @@ namespace CMathHelpertests
 			double actual = test.Circle_getcirclearea(radius);
 			Assert::AreEqual(expected, actual, 0.1);
 		}
+
+		//Ellipse
+		TEST_METHOD(Test_Ellipse_getellipsemajoraxis)
+		{
+			double majorAxis = 5;
+			double minorAxis = 3;
+			double expected = 5;
+			double actual = Tests::Ellipse_getellipsemajoraxis(majorAxis, minorAxis);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Ellipse_getellipseminoraxis)
+		{
+			double majorAxis = 5;
+			double minorAxis = 3;
+			double expected = 3;
+			double actual = Tests::Ellipse_getellipseminoraxis(majorAxis, minorAxis);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Ellipse_getellipsefoci)
+		{
+			double majorAxis = 5;
+			double minorAxis = 3;
+			double expected = 4;
+			double actual = Tests::Ellipse_getellipsefoci(majorAxis, minorAxis);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Ellipse_getellipsedirectrix)
+		{
+			double majorAxis = 5;
+			double minorAxis = 3;
+			double expected = 6.25;
+			double actual = Tests::Ellipse_getellipsedirectrix(majorAxis, minorAxis);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Ellipse_getellipsevertex)
+		{
+			double majorAxis = 5;
+			double minorAxis = 3;
+			double expected = 5;
+			double actual = Tests::Ellipse_getellipsevertex(majorAxis, minorAxis);
+			Assert::AreEqual(expected, actual, 0.1);
+		}		
+		TEST_METHOD(Test_Ellipse_getellipsedarea)
+		{
+			double majorAxis = 5;
+			double minorAxis = 3;
+			double expected = 47.12;
+			double actual = Tests::Ellipse_getellipsearea(majorAxis, minorAxis);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+
 	};
 		
 }

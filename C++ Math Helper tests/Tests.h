@@ -44,15 +44,13 @@ public:
 	double Circle_getcircleradius(double radius);
 	double Circle_getcirclearea(double radius);
 	//Ellipse
-	//Ellipse();
-	//Ellipse(double, double);
-	//double Ellipse_getellipsemajoraxis();
-	//double Ellipse_getellipseminoraxis();
-	//double Ellipse_getellipsefoci();
-	//double Ellipse_getellipsedirectrix();
-	//double Ellipse_getellipsevertex();
-	//double Ellipse_getellipsearea();
-	//void ellipsesolve();
+	static double Ellipse_getellipsemajoraxis(double majorAxis, double minorAxis);
+	static double Ellipse_getellipseminoraxis(double majorAxis, double minorAxis);
+	static double Ellipse_getellipsefoci(double majorAxis, double minorAxis);
+	static double Ellipse_getellipsedirectrix(double majorAxis, double minorAxis);
+	static double Ellipse_getellipsevertex(double majorAxis, double minorAxis);
+	static double Ellipse_getellipsearea(double majorAxis, double minorAxis);
+	//void Ellipse_ellipsesolve();
 	//void ellipsefoci();
 	//void ellipsedirectrix();
 	//void ellipsevertex();
