@@ -1,0 +1,21 @@
+[2020-04-20 16:14:50] [info] Start Program:
+Path:"C:\\Users\\fire_\\Documents\\Programs\\C--Math-Solver\\x64\\Debug\\C++ Math Helper tests.dll"
+Arguments:
+Working directory: "C:\\Users\\fire_\\Documents\\Programs\\C--Math-Solver\\C++ Math Helper tests\\"
+Modules: Selected: C:\Users\fire_\Documents\Programs\C--Math-Solver\x64\Debug\C++ Math Helper tests.dll Excluded: 
+Sources: Selected: C:\Users\fire_\Documents\Programs\C--Math-Solver\C++ Math Helper tests Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: binary C:\Users\fire_\AppData\Local\Temp\illikkby.ceq 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2020-04-20 16:14:50] [error] Error: Cannot run process, check if it is a valid executable:
+Path:"C:\\Users\\fire_\\Documents\\Programs\\C--Math-Solver\\x64\\Debug\\C++ Math Helper tests.dll"
+Arguments:
+Working directory: "C:\\Users\\fire_\\Documents\\Programs\\C--Math-Solver\\C++ Math Helper tests\\"Last error code:193

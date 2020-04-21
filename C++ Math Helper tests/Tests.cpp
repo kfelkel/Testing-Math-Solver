@@ -14,6 +14,7 @@
 #include "circle.h"
 #include "ellipse.h"
 #include "parabola.h"
+#include "solveLinear.h"
 #include <string>
 
 //void Tests::runTests() {
@@ -315,6 +316,12 @@ double Tests::Rectangle_getrectangleperimeter(double length, double width) {
 	rec->width = width;
 	double output = rec->getrectangleperimeter();
 	delete rec;
+	return output;
+}
+std::string Tests::solveLinear_solveEquation(std::string equation) {
+	solvelinear::solveLinear solveLinear;
+	solveLinear.equation = equation;
+	std::string output = solveLinear.solveEquation();
 	return output;
 }
 //Circle

@@ -1,5 +1,6 @@
 #ifndef Tests_H
 #define Tests_H
+#include <string>
 class Tests {
 public:
 	//void runTests();
@@ -35,6 +36,8 @@ public:
 	double Rectangle_getrectanglewidth(double width);
 	double Rectangle_getrectanglearea(double length, double width);
 	double Rectangle_getrectangleperimeter(double length, double width);
+	//solveLinear
+	std::string solveLinear_solveEquation(std::string equation);
 	//Circle
 	double Circle_getcirclediameter(double radius);
 	double Circle_getcirclecircumference(double radius);

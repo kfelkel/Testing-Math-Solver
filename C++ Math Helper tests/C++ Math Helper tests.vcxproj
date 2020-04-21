@@ -111,11 +111,16 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <UseFullPaths>true</UseFullPaths>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
     </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -173,6 +178,7 @@
     <ClCompile Include="pyramid.cpp" />
     <ClCompile Include="rectangle.cpp" />
     <ClCompile Include="sas.cpp" />
+    <ClCompile Include="solveLinear.cpp" />
     <ClCompile Include="ssa.cpp" />
     <ClCompile Include="sss.cpp" />
     <ClCompile Include="Tests.cpp" />
@@ -190,6 +196,7 @@
     <ClInclude Include="pyramid.h" />
     <ClInclude Include="rectangle.h" />
     <ClInclude Include="sas.h" />
+    <ClInclude Include="solveLinear.h" />
     <ClInclude Include="ssa.h" />
     <ClInclude Include="sss.h" />
     <ClInclude Include="Tests.h" />

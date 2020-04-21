@@ -33,7 +33,7 @@ namespace triangle
 		void triangleperimeter();
 		friend  std::ostream& operator<<(std::ostream&, const Triangle);
 		friend void operator>>(std::istream&, Triangle&);
-
+	protected:
 		double sidea;
 		double sideb;
 		double sidec;
@@ -43,8 +43,7 @@ namespace triangle
 		double heighta;
 		double heightb;
 		double heightc;
-
-
+	private:
 		double area;
 		double perimeter;
 	};
