@@ -343,3 +343,43 @@ double Tests::Circle_getcirclearea(double radius) {
 	double output = circ.getcirclearea();
 	return output;
 }
+
+//Ellipse
+double Tests::Ellipse_getellipsemajoraxis(double majorAxis, double minorAxis) {
+	ellipse::Ellipse ellipse(majorAxis, minorAxis);
+	double output = ellipse.getellipsemajoraxis();
+	return output;
+}
+double Tests::Ellipse_getellipseminoraxis(double majorAxis, double minorAxis) {
+	ellipse::Ellipse ellipse(majorAxis, minorAxis);
+	double output = ellipse.getellipseminoraxis();
+	return output;
+}
+double Tests::Ellipse_getellipsefoci(double majorAxis, double minorAxis) {
+	ellipse::Ellipse ellipse;
+	ellipse.majoraxis = majorAxis;
+	ellipse.minoraxis = minorAxis;
+	double output = ellipse.getellipsefoci();
+	return output;
+}
+double Tests::Ellipse_getellipsedirectrix(double majorAxis, double minorAxis) {
+	ellipse::Ellipse ellipse;
+	ellipse.majoraxis = majorAxis;
+	ellipse.minoraxis = minorAxis;
+	double output = ellipse.getellipsedirectrix();
+	return output;
+}
+double Tests::Ellipse_getellipsevertex(double majorAxis, double minorAxis) {
+	ellipse::Ellipse ellipse;
+	ellipse.majoraxis = majorAxis;
+	ellipse.minoraxis = minorAxis;
+	double output = ellipse.getellipsevertex();
+	return output;
+}
+double Tests::Ellipse_getellipsearea(double majorAxis, double minorAxis) {
+	ellipse::Ellipse ellipse;
+	ellipse.majoraxis = majorAxis;
+	ellipse.minoraxis = minorAxis;
+	double output = ellipse.getellipsearea();
+	return output;
+}
