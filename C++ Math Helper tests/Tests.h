@@ -31,6 +31,7 @@ public:
 	double Triangle_triangleheighta(double angleB, double angleC, double sidea);
 	double Triangle_triangleheightb(double angleA, double angleB, double sideb);
 	double Triangle_triangleheightc(double angleA, double angleB, double sidec);
+	std::string Triangle_ostreamOperator(double sidea, double sideb, double sidec, double angleA, double angleB, double angleC);
 	//Rectangle
 	double Rectangle_getrectanglelength(double length);
 	double Rectangle_getrectanglewidth(double width);

@@ -16,6 +16,8 @@
 #include "parabola.h"
 #include "solveLinear.h"
 #include <string>
+#include <sstream>
+#include <iostream>
 
 //void Tests::runTests() {
 	//AAS
@@ -287,6 +289,16 @@ double Tests::Triangle_triangleheightc(double angleA, double angleB, double side
 	delete triangle;
 	return output;
 }
+
+std::string Tests::Triangle_ostreamOperator(double sidea, double sideb, double sidec, double angleA, double angleB, double angleC) {
+	std::string returnString;
+	triangle::Triangle triangle(sidea, sideb, sidec, angleA, angleB, angleC);
+	triangle.trianglesolve();
+	std::stringstream output;
+	output << triangle;
+	returnString = output.str();
+	return returnString;
+}
 //Rectangle
 double Tests::Rectangle_getrectanglelength(double length) {
 	rectangle::Rectangle* rec = new rectangle::Rectangle;
@@ -373,6 +385,7 @@ double Tests::Ellipse_getellipsedirectrix(double majorAxis, double minorAxis) {
 	ellipse::Ellipse ellipse;
 	ellipse.majoraxis = majorAxis;
 	ellipse.minoraxis = minorAxis;
+	ellipse.ellipsefoci();
 	double output = ellipse.getellipsedirectrix();
 	return output;
 }

@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "CppUnitTest.h"
 #include "Tests.h"
+#include <iostream>
+#include <string>
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace CMathHelpertests
@@ -187,6 +189,14 @@ namespace CMathHelpertests
 			Tests test;
 			double actual = test.Triangle_triangleheightc(34, 29, 3);
 			Assert::AreEqual(expected, actual, 0.1);
+		}
+
+		TEST_METHOD(Test_Triangle_triangleOstreamOoperator) {
+			Tests test;
+			std::string expected = "\n\tSide A: \t3.00\n\tSide B: \t3.00\n\tSide C: \t3.00\n\n\tAngle A: \t60.00\n\tAngle B: \t60.00\n\tAngle C: \t60.00\n\n\tHeight A: \t2.60\n\tHeight B: \t2.60\n\tHeight C: \t2.60\n\n\tArea: \t\t3.90\n\tPerimeter: \t9.00";
+			std::string actual = test.Triangle_ostreamOperator(3, 3, 3, 60, 60, 60);
+			//std::cout << "Hello world";
+			Assert::AreEqual(expected, actual);
 		}
 		//Rectangle
 		TEST_METHOD(Test_Rectangle_getrectanglelength) {
