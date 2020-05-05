@@ -10,6 +10,7 @@ namespace CMathHelpertests
 	TEST_CLASS(CMathHelpertests)
 	{
 	public:
+
 		const double pi = 3.14159;
 		
 		TEST_METHOD(Test_AAS_AASangleB)
@@ -377,8 +378,98 @@ namespace CMathHelpertests
 			Assert::AreEqual(expected, actual);
 		}
 		
-		 
-		
+		//Parabola
+		TEST_METHOD(Parabola_getparabolavaluea) {
+			double valuea = 10;
+			double valueb = 12;
+			double valuec = 14;
+			double expected = 10;
+			double actual = Tests::Parabola_getparabolavaluea(valuea, valueb, valuec);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Parabola_getparabolavalueb) {
+			double valuea = 10;
+			double valueb = 12;
+			double valuec = 14;
+			double expected = 12;
+			double actual = Tests::Parabola_getparabolavalueb(valuea, valueb, valuec);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Parabola_getparabolavaluec) {
+			double valuea = 10;
+			double valueb = 12;
+			double valuec = 14;
+			double expected = 14;
+			double actual = Tests::Parabola_getparabolavaluec(valuea, valueb, valuec);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Parabola_getparabolavertexX) {
+			double valuea = 10;
+			double valueb = 12;
+			double valuec = 14;
+			double expected = -0.6;
+			double actual = Tests::Parabola_getparabolavertexX(valuea, valueb, valuec);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Parabola_getparabolavertexY) {
+			double valuea = 10;
+			double valueb = 12;
+			double valuec = 14;
+			double expected = 10.4;
+			double actual = Tests::Parabola_getparabolavertexY(valuea, valueb, valuec);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Parabola_getparaboladirectrix) {
+			double valuea = 10;
+			double valueb = 12;
+			double valuec = 14;
+			double expected = 10.375;
+			double actual = Tests::Parabola_getparaboladirectrix(valuea, valueb, valuec);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Parabola_getparabolafocus) {
+			double valuea = 10;
+			double valueb = 12;
+			double valuec = 14;
+			double expected = 10.425;
+			double actual = Tests::Parabola_getparabolafocus(valuea, valueb, valuec);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Parabola_ostreamOperator) {
+			double valuea = 10;
+			double valueb = 12;
+			double valuec = 14;
+			std::string expected = "\n\tParobola Equation: y = ";
+			expected += "10.00";
+			expected += "x^2 + ";
+			expected += "12.00";
+			expected += "x + ";
+			expected += "14.00";
+			expected += "\n\n\tVertex: (";
+			expected += "-0.60";
+			expected += ",";
+			expected += "10.40";
+			expected += ")";
+			expected += "\n\tDirectrix: x=";
+			expected += "10.38";
+			expected += "\n\tFocus: (";
+			expected += "-0.6";
+			expected += ",";
+			expected += "10.43";			
+			expected += ")";
+			std::string actual = Tests::Parabola_ostreamOperator(valuea, valueb, valuec);
+			Assert::AreEqual(expected, actual);
+		}
+
+
+
+
+
+
+
+
+
+
 		 
 		 
 

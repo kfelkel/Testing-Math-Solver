@@ -428,14 +428,13 @@ double Tests::Cube_getcubeperimeter(double length, double width, double height) 
 	return cube.getcubeperimeter();
 }
 double Tests::Cube_getcubevolume(double length, double width, double height) {
-	cube::Cube cube;
-	std::stringstream input;
-	input << length;
-	input << width;
-	input << height;
-	input >> cube;
-	input >> cube;
-	input >> cube;
+	//cube::Cube cube;
+	//std::stringstream input;
+	//input << length;
+	//input << width;
+	//input << height;
+	//input >> cube;
+	cube::Cube cube(length, width, height);
 	return cube.getcubevolume();
 }
 std::string Tests::Cube_ostreamOperator(double length, double width, double height) {
@@ -448,3 +447,41 @@ std::string Tests::Cube_ostreamOperator(double length, double width, double heig
 	return returnString;
 }
 
+//Parabola
+double Tests::Parabola_getparabolavaluea(double valuea, double valueb, double valuec) {
+	parabola::Parabola parabola(valuea, valueb, valuec);
+	return parabola.getparabolavaluea();
+}
+double Tests::Parabola_getparabolavalueb(double valuea, double valueb, double valuec) {
+	parabola::Parabola parabola(valuea, valueb, valuec);
+	return parabola.getparabolavalueb();
+}
+double Tests::Parabola_getparabolavaluec(double valuea, double valueb, double valuec) {
+	parabola::Parabola parabola(valuea, valueb, valuec);
+	return parabola.getparabolavaluec();
+}
+double Tests::Parabola_getparabolavertexX(double valuea, double valueb, double valuec) {
+	parabola::Parabola parabola(valuea, valueb, valuec);
+	return parabola.getparabolavertexX();
+}
+double Tests::Parabola_getparabolavertexY(double valuea, double valueb, double valuec) {
+	parabola::Parabola parabola(valuea, valueb, valuec);
+	return parabola.getparabolavertexY();
+}
+double Tests::Parabola_getparaboladirectrix(double valuea, double valueb, double valuec) {
+	parabola::Parabola parabola(valuea, valueb, valuec);
+	return parabola.getparaboladirectrix();
+}
+double Tests::Parabola_getparabolafocus(double valuea, double valueb, double valuec) {
+	parabola::Parabola parabola(valuea, valueb, valuec);
+	return parabola.getparabolafocus();
+}
+std::string Tests::Parabola_ostreamOperator(double valuea, double valueb, double valuec) {
+	std::string returnString;
+	parabola::Parabola parabola(valuea, valueb, valuec);
+	parabola.parabolasolve();
+	std::stringstream output;
+	output << parabola;
+	returnString = output.str();
+	return returnString;
+}

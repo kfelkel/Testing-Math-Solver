@@ -60,18 +60,22 @@ public:
 	//void ellipsearea();
 		//To-Do
 	//Cube
-	//Cube();
-	//Cube(double, double, double);
 	static double Cube_getcubeheight(double length, double width, double height);
 	static double Cube_getcubearea(double length, double width, double height);
 	static double Cube_getcubeperimeter(double length, double width, double height);
 	static double Cube_getcubevolume(double length, double width, double height);
 	static std::string Cube_ostreamOperator(double length, double width, double height);
-	//static void cubesolve();
-	//static void cubearea();
 
-	//friend  std::ostream& operator<<(std::ostream&, const Cube);
-	//friend void operator>>(std::istream&, Cube&);
+	//Parabola
+	static double Parabola_getparabolavaluea(double valuea, double valueb, double valuec);
+	static double Parabola_getparabolavalueb(double valuea, double valueb, double valuec);
+	static double Parabola_getparabolavaluec(double valuea, double valueb, double valuec);
+	static double Parabola_getparabolavertexX(double valuea, double valueb, double valuec);
+	static double Parabola_getparabolavertexY(double valuea, double valueb, double valuec);
+	static double Parabola_getparaboladirectrix(double valuea, double valueb, double valuec);
+	static double Parabola_getparabolafocus(double valuea, double valueb, double valuec);
+	static std::string Parabola_ostreamOperator(double valuea, double valueb, double valuec);
+
 };
 #endif // Tests_H
 
