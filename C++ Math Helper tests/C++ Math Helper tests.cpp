@@ -460,19 +460,7 @@ namespace CMathHelpertests
 			std::string actual = Tests::Parabola_ostreamOperator(valuea, valueb, valuec);
 			Assert::AreEqual(expected, actual);
 		}
-
-
-
-
-
-
-
-
-
-
 		 
-		 
-
 	};
 		
 }
