@@ -315,12 +315,11 @@ double Tests::Rectangle_getrectanglewidth(double width) {
 	return output;
 }
 double Tests::Rectangle_getrectanglearea(double length, double width) {
-	rectangle::Rectangle* rec = new rectangle::Rectangle;
-	rec->length = length;
-	rec->width = width;
-	double output = rec->getrectanglearea();
-	delete rec;
-	return output;
+	rectangle::Rectangle rect;
+	std::stringstream inputBuffer;
+	inputBuffer << length << std::endl << width;
+	inputBuffer >> rect;
+	return rect.getrectanglearea();
 }
 double Tests::Rectangle_getrectangleperimeter(double length, double width) {
 	rectangle::Rectangle* rec = new rectangle::Rectangle;
@@ -491,12 +490,11 @@ double Tests::Cube_getcubeperimeter(double length, double width, double height) 
 double Tests::Cube_getcubevolume(double length, double width, double height) {
 	cube::Cube cube;
 	std::stringstream input;
-	input << length;
-	input << width;
-	input << height;
+	input << length << std::endl;
+	input << width << std::endl;;
+	input << height << std::endl;
 	input >> cube;
-	input >> cube;
-	input >> cube;
+	//cube::Cube cube(length, width, height);
 	return cube.getcubevolume();
 }
 std::string Tests::Cube_ostreamOperator(double length, double width, double height) {
@@ -509,3 +507,46 @@ std::string Tests::Cube_ostreamOperator(double length, double width, double heig
 	return returnString;
 }
 
+//Parabola
+double Tests::Parabola_getparabolavaluea(double valuea, double valueb, double valuec) {
+	parabola::Parabola parabola;
+	std::stringstream input;
+	input << valuea << std::endl;
+	input << valueb<< std::endl;;
+	input << valuec << std::endl;
+	input >> parabola;
+	return parabola.getparabolavaluea();
+}
+double Tests::Parabola_getparabolavalueb(double valuea, double valueb, double valuec) {
+	parabola::Parabola parabola(valuea, valueb, valuec);
+	return parabola.getparabolavalueb();
+}
+double Tests::Parabola_getparabolavaluec(double valuea, double valueb, double valuec) {
+	parabola::Parabola parabola(valuea, valueb, valuec);
+	return parabola.getparabolavaluec();
+}
+double Tests::Parabola_getparabolavertexX(double valuea, double valueb, double valuec) {
+	parabola::Parabola parabola(valuea, valueb, valuec);
+	return parabola.getparabolavertexX();
+}
+double Tests::Parabola_getparabolavertexY(double valuea, double valueb, double valuec) {
+	parabola::Parabola parabola(valuea, valueb, valuec);
+	return parabola.getparabolavertexY();
+}
+double Tests::Parabola_getparaboladirectrix(double valuea, double valueb, double valuec) {
+	parabola::Parabola parabola(valuea, valueb, valuec);
+	return parabola.getparaboladirectrix();
+}
+double Tests::Parabola_getparabolafocus(double valuea, double valueb, double valuec) {
+	parabola::Parabola parabola(valuea, valueb, valuec);
+	return parabola.getparabolafocus();
+}
+std::string Tests::Parabola_ostreamOperator(double valuea, double valueb, double valuec) {
+	std::string returnString;
+	parabola::Parabola parabola(valuea, valueb, valuec);
+	parabola.parabolasolve();
+	std::stringstream output;
+	output << parabola;
+	returnString = output.str();
+	return returnString;
+}

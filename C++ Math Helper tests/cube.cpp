@@ -53,13 +53,14 @@ namespace cube {
 	void operator>>(std::istream& ins, Cube& a) {
 	
 			system("CLS");
-			std::cout << "What is the length? ";
-			ins >> a.length;
-			std::cout << "What is the width? ";
-			ins >> a.width;
-			std::cout << "What is the height? ";
-			ins >> a.height;
-		
+			do {
+				std::cout << "What is the length? ";
+				ins >> a.length;
+				std::cout << "What is the width? ";
+				ins >> a.width;
+				std::cout << "What is the height? ";
+				ins >> a.height;
+			} while (a.length <= 0 || a.width <= 0 || a.height <= 0);
 	}
 }
 
