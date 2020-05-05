@@ -346,6 +346,67 @@ std::string Tests::solveLinear_solveEquation(std::string equation) {
 	std::string output = solveLinear.solveEquation();
 	return output;
 }
+//Polygon
+double Tests::Polygon_getpolygonsides(double sides) {
+	polygon::Polygon* polygon = new polygon::Polygon;
+	polygon->sides = sides;
+	double output = polygon->getpolygonsides();
+	delete polygon;
+	return output;
+}
+double Tests::Polygon_getpolygonlength(double length) {
+	polygon::Polygon* polygon = new polygon::Polygon;
+	polygon->length = length;
+	double output = polygon->getpolygonlength();
+	delete polygon;
+	return output;
+}
+double Tests::Polygon_polygonapothem(double sides, double length) {
+	polygon::Polygon* polygon = new polygon::Polygon;
+	polygon->sides = sides;
+	polygon->length = length;
+	polygon->polygonapothem();
+	double output = polygon->getpolygonapothem();
+	delete polygon;
+	return output;
+}
+double Tests::Polygon_polygonradius(double sides, double length) {
+	polygon::Polygon* polygon = new polygon::Polygon(sides,length);
+	polygon->sides = sides;
+	polygon->length = length;
+	polygon->polygonradius();
+	double output = polygon->getpolygonradius();
+	delete polygon;
+	return output;
+}
+double Tests::Polygon_polygonarea(double sides, double length) {
+	polygon::Polygon* polygon = new polygon::Polygon;
+	polygon->sides = sides;
+	polygon->length = length;
+
+	polygon->polygonarea();
+	double output = polygon->getpolygonarea();
+	delete polygon;
+	return output;
+}
+double Tests::Polygon_polygonperimeter(double sides, double length) {
+	polygon::Polygon* polygon = new polygon::Polygon;
+	polygon->sides = sides;
+	polygon->length = length;
+	polygon->polygonperimeter();
+	double output = polygon->getpolygonperimeter();
+	delete polygon;
+	return output;
+}
+std::string Tests::Polygon_ostreamOperator(double sides, double length) {
+	std::string returnString;
+	polygon::Polygon polygon(sides,length);
+	polygon.polygonsolve();
+	std::stringstream output;
+	output << polygon;
+	returnString = output.str();
+	return returnString;
+}
 //Circle
 double Tests::Circle_getcirclediameter(double radius) {
 	circle::Circle circ;

@@ -244,6 +244,62 @@ namespace CMathHelpertests
 			std::string actual = test.solveLinear_solveEquation("5x-2=3");
 			Assert::AreEqual(expected, actual);
 		}
+		//Polygon
+		TEST_METHOD(Test_Polygon_getpolygonsides) {
+			double expected = 3;
+			Tests test;
+			double actual = test.Polygon_getpolygonsides(3);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Polygon_getpolygonlength) {
+			double expected = 5;
+			Tests test;
+			double actual = test.Polygon_getpolygonlength(5);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Polygon_polygonapothem) {
+			double expected = 2.75;
+			Tests test;
+			double actual = test.Polygon_polygonapothem(5,4);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Polygon_polygonradius) {
+			double expected = 3.40;
+			Tests test;
+			double actual = test.Polygon_polygonradius(5,4);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Polygon_polygonarea) {
+			double expected = 27.52;
+			Tests test;
+			double actual = test.Polygon_polygonarea(5,4);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Polygon_polygonperimeter) {
+			double expected = 20;
+			Tests test;
+			double actual = test.Polygon_polygonperimeter(5, 4);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Polygon_ostreamOperator) {
+			Tests test;
+			std::string expected;
+			expected += "\n\t# of sides: ";
+			expected += "5";
+			expected += "\n\tLength of each side: ";
+			expected += "4.00";
+			expected += "\n\n\tApothem: ";
+			expected += "2.75";
+			expected += "\n\tRadius: ";
+			expected += "3.40";
+			expected += "\n\n\tArea: ";
+			expected += "27.53";
+			expected += "\n\tPerimeter: ";
+			expected += "20.00";
+
+			std::string actual = test.Polygon_ostreamOperator(5, 4);
+			Assert::AreEqual(expected, actual);
+		}
 		//Circle
 		TEST_METHOD(Test_Circle_circleDiameter)
 		{

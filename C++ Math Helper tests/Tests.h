@@ -41,6 +41,14 @@ public:
 	//return type? Rectangle_istreamOperator(double length, double width);
 	//solveLinear
 	std::string solveLinear_solveEquation(std::string equation);
+	//Polygon
+	double Polygon_getpolygonsides(double sides);
+	double Polygon_getpolygonlength(double length);
+	double Polygon_polygonapothem(double sides, double length);
+	double Polygon_polygonradius(double sides, double length);
+	double Polygon_polygonarea(double sides, double length);
+	double Polygon_polygonperimeter(double sides, double length);
+	std::string Polygon_ostreamOperator(double sides, double length);
 	//Circle
 	double Circle_getcirclediameter(double radius);
 	double Circle_getcirclecircumference(double radius);
