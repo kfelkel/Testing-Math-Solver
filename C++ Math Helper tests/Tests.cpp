@@ -330,6 +330,16 @@ double Tests::Rectangle_getrectangleperimeter(double length, double width) {
 	delete rec;
 	return output;
 }
+std::string Tests::Rectangle_ostreamOperator(double length, double width) {
+	std::string returnString;
+	rectangle::Rectangle rect(length, width);
+	rect.rectanglesolve();
+	std::stringstream output;
+	output << rect;
+	returnString = output.str();
+	return returnString;
+}
+//solveLinear
 std::string Tests::solveLinear_solveEquation(std::string equation) {
 	solvelinear::solveLinear solveLinear;
 	solveLinear.equation = equation;
@@ -403,3 +413,38 @@ double Tests::Ellipse_getellipsearea(double majorAxis, double minorAxis) {
 	double output = ellipse.getellipsearea();
 	return output;
 }
+
+//Cube
+double Tests::Cube_getcubeheight(double length, double width, double height) {
+	cube::Cube cube(length, width, height);
+	return cube.getcubeheight();
+}
+double Tests::Cube_getcubearea(double length, double width, double height) {
+	cube::Cube cube(length, width, height);
+	return cube.getcubearea();
+}
+double Tests::Cube_getcubeperimeter(double length, double width, double height) {
+	cube::Cube cube(length, width, height);
+	return cube.getcubeperimeter();
+}
+double Tests::Cube_getcubevolume(double length, double width, double height) {
+	cube::Cube cube;
+	std::stringstream input;
+	input << length;
+	input << width;
+	input << height;
+	input >> cube;
+	input >> cube;
+	input >> cube;
+	return cube.getcubevolume();
+}
+std::string Tests::Cube_ostreamOperator(double length, double width, double height) {
+	std::string returnString;
+	cube::Cube cube(length, width, height);
+	cube.cubesolve();
+	std::stringstream output;
+	output << cube;
+	returnString = output.str();
+	return returnString;
+}
+

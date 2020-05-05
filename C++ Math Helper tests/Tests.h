@@ -37,6 +37,8 @@ public:
 	double Rectangle_getrectanglewidth(double width);
 	double Rectangle_getrectanglearea(double length, double width);
 	double Rectangle_getrectangleperimeter(double length, double width);
+	std::string Rectangle_ostreamOperator(double length, double width);
+	//return type? Rectangle_istreamOperator(double length, double width);
 	//solveLinear
 	std::string solveLinear_solveEquation(std::string equation);
 	//Circle
@@ -57,6 +59,19 @@ public:
 	//void ellipsevertex();
 	//void ellipsearea();
 		//To-Do
+	//Cube
+	//Cube();
+	//Cube(double, double, double);
+	static double Cube_getcubeheight(double length, double width, double height);
+	static double Cube_getcubearea(double length, double width, double height);
+	static double Cube_getcubeperimeter(double length, double width, double height);
+	static double Cube_getcubevolume(double length, double width, double height);
+	static std::string Cube_ostreamOperator(double length, double width, double height);
+	//static void cubesolve();
+	//static void cubearea();
+
+	//friend  std::ostream& operator<<(std::ostream&, const Cube);
+	//friend void operator>>(std::istream&, Cube&);
 };
 #endif // Tests_H
 

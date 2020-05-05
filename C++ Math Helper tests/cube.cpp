@@ -3,7 +3,7 @@
 
 namespace cube {
 	Cube::Cube() :Rectangle(), height(0), area(0), perimeter(0), volume(0) {}
-	Cube::Cube(double a, double b, double c) : Rectangle(a, b), height(0) {}
+	Cube::Cube(double a, double b, double c) : Rectangle(a, b), height(c) {}
 	void Cube::cubesolve() {
 		cubearea();
 		cubeperimeter();
@@ -51,8 +51,7 @@ namespace cube {
 		return outs;
 	}
 	void operator>>(std::istream& ins, Cube& a) {
-		do
-		{
+	
 			system("CLS");
 			std::cout << "What is the length? ";
 			ins >> a.length;
@@ -60,7 +59,7 @@ namespace cube {
 			ins >> a.width;
 			std::cout << "What is the height? ";
 			ins >> a.height;
-		} while (a.length <= 0 || a.width <= 0 || a.height <= 0);
+		
 	}
 }
 

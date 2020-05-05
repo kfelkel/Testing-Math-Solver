@@ -195,7 +195,6 @@ namespace CMathHelpertests
 			Tests test;
 			std::string expected = "\n\tSide A: \t3.00\n\tSide B: \t3.00\n\tSide C: \t3.00\n\n\tAngle A: \t60.00\n\tAngle B: \t60.00\n\tAngle C: \t60.00\n\n\tHeight A: \t2.60\n\tHeight B: \t2.60\n\tHeight C: \t2.60\n\n\tArea: \t\t3.90\n\tPerimeter: \t9.00";
 			std::string actual = test.Triangle_ostreamOperator(3, 3, 3, 60, 60, 60);
-			//std::cout << "Hello world";
 			Assert::AreEqual(expected, actual);
 		}
 		//Rectangle
@@ -222,6 +221,20 @@ namespace CMathHelpertests
 			Tests test;
 			double actual = test.Rectangle_getrectangleperimeter(4, 5);
 			Assert::AreEqual(expected, actual, 0.1);
+		}
+
+		TEST_METHOD(Test_Reactangle_ostreamOperator) {
+			Tests test;
+			std::string expected = "\n\tLength: \t";
+			expected += "5.00";
+			expected+= "\n\tWidth: \t\t";
+			expected += "10.00";
+			expected+= "\n\n\tArea: \t\t";
+			expected += "50.00";
+			expected+= "\n\tPerimeter: \t";
+			expected+= "30.00";
+			std::string actual = test.Rectangle_ostreamOperator(5,10);
+			Assert::AreEqual(expected, actual);
 		}
 		//solveLinear
 		TEST_METHOD(Test_solveLinear_solveEquation)
@@ -311,6 +324,63 @@ namespace CMathHelpertests
 			double actual = Tests::Ellipse_getellipsearea(majorAxis, minorAxis);
 			Assert::AreEqual(expected, actual, 0.1);
 		}
+
+		//Cube
+		TEST_METHOD(Cube_getcubeheight) {
+			int length = 5;
+			int width = 8;
+			int height = 3;
+			int expected = 3;
+			double actual = Tests::Cube_getcubeheight(length, width, height);
+		}
+		TEST_METHOD(Cube_getcubearea) {
+			int length=8;
+			int width=5;
+			int height=6;
+			int expected=236;
+			double actual = Tests::Cube_getcubearea(length, width, height);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Cube_getcubeperimeter) {
+			int length=7;
+			int width=11;
+			int height=3;
+			int expected=84;
+			double actual = Tests::Cube_getcubeperimeter(length, width, height);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Cube_getcubevolume) {
+			int length=4;
+			int width=12;
+			int height=7;
+			int expected=336;
+			double actual = Tests::Cube_getcubevolume(length, width, height);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Cube_ostreamOperator) {
+			int length=10;
+			int width=5;
+			int height=8;
+			std::string expected= "\n\tLength: ";
+			expected += "10";
+			expected += "\n\tWidth: ";
+			expected += "5";
+			expected += "\n\tHeight: ";
+			expected += "8";
+			expected += "\n\n\tArea: ";
+			expected += "340";
+			expected += "\n\tPerimeter: ";
+			expected += "92";
+			expected += "\n\tVolume: ";
+			expected += "400";
+			std::string actual = Tests::Cube_ostreamOperator(length, width, height);
+			Assert::AreEqual(expected, actual);
+		}
+		
+		 
+		
+		 
+		 
 
 	};
 		
