@@ -614,6 +614,73 @@ namespace CMathHelpertests
 			std::string actual = Tests::Polygon3D_ostreamOperator(sides, length, height);
 			Assert::AreEqual(expected, actual);
 		}
+
+	//Pyramid
+		TEST_METHOD(Test_Pyramid_getpyramidheight) {
+			int sides = 4;
+			double length = 6;
+			double height = 8;
+			double expected = 8;
+			double actual = Tests::Pyramid_getpyramidheight(sides, length, height);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Pyramid_getpyramidlaterallength) {
+			int sides = 4;
+			double length = 6;
+			double height = 8;
+			double expected = 9;
+			double actual = Tests::Pyramid_getpyramidlateraledgelength(sides, length, height);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Pyramid_getpyramidslantheight) {
+			int sides = 4;
+			double length = 6;
+			double height = 8;
+			double expected = 8.5;
+			double actual = Tests::Pyramid_getpyramidslantheight(sides, length, height);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Pyramid_getpyramidarea) {
+			int sides = 4;
+			double length = 6;
+			double height = 8;
+			double expected = 138.5;
+			double actual = Tests::Pyramid_getpyramidarea(sides, length, height);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Pyramid_getpyramidperimeter) {
+			int sides = 4;
+			double length = 6;
+			double height = 8;
+			double expected = 60.2;
+			double actual = Tests::Pyramid_getpyramidperimeter(sides, length, height);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Pyramid_getpyramidvolume) {
+			int sides = 4;
+			double length = 6;
+			double height = 8;
+			double expected = 96;
+			double actual = Tests::Pyramid_getpyramidvolume(sides, length, height);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Pyramid_ostreamOperator) {
+			int sides = 4;
+			double length = 6;
+			double height = 8;
+			std::string expected = "\n\t# of sides: \t\t4";
+			expected += "\n\tLength of each side: \t6.00";
+			expected += "\n\tHeight: \t\t8.00";
+			expected += "\n\n\tSlantheight: \t\t8.54";
+			expected += "\n\tLateral edge length: \t9.06";
+			expected += "\n\tBase Apothem: \t\t3.00";
+			expected += "\n\tBase Radius: \t\t4.24";
+			expected += "\n\n\tArea: \t\t\t138.53";
+			expected += "\n\tPerimeter: \t\t60.22";
+			expected += "\n\tVolume: \t\t95.99";
+			std::string actual = Tests::Pyramid_ostreamOperator(sides, length, height);
+			Assert::AreEqual(expected, actual);
+		}
 	};
 		
 }

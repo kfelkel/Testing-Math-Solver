@@ -568,3 +568,39 @@ std::string Tests::Polygon3D_ostreamOperator(int sides, double length, double he
 	output << polygon3d;
 	return output.str();
 }
+
+//Pyramid
+double Tests::Pyramid_getpyramidheight(int sides, double length, double height) {
+	pyramid::Pyramid pyramid(sides, length, height);
+	return pyramid.getpyramidheight();
+}
+double Tests::Pyramid_getpyramidlateraledgelength(int sides, double length, double height) {
+	pyramid::Pyramid pyramid(sides, length, height);
+	return pyramid.getpyramidlateraledgelength();
+}
+double Tests::Pyramid_getpyramidslantheight(int sides, double length, double height) {
+	pyramid::Pyramid pyramid(sides, length, height);
+	return pyramid.getpyramidslantheight();
+}
+double Tests::Pyramid_getpyramidarea(int sides, double length, double height) {
+	pyramid::Pyramid pyramid;
+	std::stringstream input;
+	input << sides << std::endl << length << std::endl << height;
+	input >> pyramid;
+	return pyramid.getpyramidarea();
+}
+double Tests::Pyramid_getpyramidperimeter(int sides, double length, double height) {
+	pyramid::Pyramid pyramid(sides, length, height);
+	return pyramid.getpyramidperimeter();
+}
+double Tests::Pyramid_getpyramidvolume(int sides, double length, double height) {
+	pyramid::Pyramid pyramid(sides, length, height);
+	return pyramid.getpyramidvolume();
+}
+std::string Tests::Pyramid_ostreamOperator(int sides, double length, double height) {
+	pyramid::Pyramid pyramid(sides, length, height);
+	std::stringstream output;
+	pyramid.pyramidsolve();
+	output << pyramid;
+	return output.str();
+}

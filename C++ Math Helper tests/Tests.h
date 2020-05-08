@@ -52,10 +52,10 @@ public:
 	double Polygon_polygonperimeter(double sides, double length);
 	std::string Polygon_ostreamOperator(double sides, double length);
 	//Circle
-	double Circle_getcirclediameter(double radius);
-	double Circle_getcirclecircumference(double radius);
-	double Circle_getcircleradius(double radius);
-	double Circle_getcirclearea(double radius);
+	static double Circle_getcirclediameter(double radius);
+	static double Circle_getcirclecircumference(double radius);
+	static double Circle_getcircleradius(double radius);
+	static double Circle_getcirclearea(double radius);
 	static std::string Circle_ostreamOperator(double radius);
 	//Ellipse
 	static double Ellipse_getellipsemajoraxis(double majorAxis, double minorAxis);
@@ -89,6 +89,15 @@ public:
 	static double Polygon3D_getpolygon3dperimeter(int sides, double length, double height);
 	static double Polygon3D_getpolygon3dvolume(int sides, double length, double height);
 	static std::string Polygon3D_ostreamOperator(int sides, double length, double height);
+
+	//Pyramid
+	static double Pyramid_getpyramidheight(int sides, double length, double height);
+	static double Pyramid_getpyramidlateraledgelength(int sides, double length, double height);
+	static double Pyramid_getpyramidslantheight(int sides, double length, double height);
+	static double Pyramid_getpyramidarea(int sides, double length, double height);
+	static double Pyramid_getpyramidperimeter(int sides, double length, double height);
+	static double Pyramid_getpyramidvolume(int sides, double length, double height);
+	static std::string Pyramid_ostreamOperator(int sides, double length, double height);
 };
 #endif // Tests_H
 
