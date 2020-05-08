@@ -38,9 +38,11 @@ public:
 	double Rectangle_getrectanglearea(double length, double width);
 	double Rectangle_getrectangleperimeter(double length, double width);
 	std::string Rectangle_ostreamOperator(double length, double width);
-	//return type? Rectangle_istreamOperator(double length, double width);
+
 	//solveLinear
 	std::string solveLinear_solveEquation(std::string equation);
+	std::string Tests::solveLinear_getEquation(std::string equation);
+
 	//Polygon
 	double Polygon_getpolygonsides(double sides);
 	double Polygon_getpolygonlength(double length);
@@ -54,6 +56,7 @@ public:
 	double Circle_getcirclecircumference(double radius);
 	double Circle_getcircleradius(double radius);
 	double Circle_getcirclearea(double radius);
+	static std::string Circle_ostreamOperator(double radius);
 	//Ellipse
 	static double Ellipse_getellipsemajoraxis(double majorAxis, double minorAxis);
 	static double Ellipse_getellipseminoraxis(double majorAxis, double minorAxis);
@@ -61,12 +64,8 @@ public:
 	static double Ellipse_getellipsedirectrix(double majorAxis, double minorAxis);
 	static double Ellipse_getellipsevertex(double majorAxis, double minorAxis);
 	static double Ellipse_getellipsearea(double majorAxis, double minorAxis);
-	//void Ellipse_ellipsesolve();
-	//void ellipsefoci();
-	//void ellipsedirectrix();
-	//void ellipsevertex();
-	//void ellipsearea();
-		//To-Do
+	static std::string Tests::Ellipse_ostreamOperator(double majorAxis, double minorAxis);
+
 	//Cube
 	static double Cube_getcubeheight(double length, double width, double height);
 	static double Cube_getcubearea(double length, double width, double height);

@@ -245,6 +245,13 @@ namespace CMathHelpertests
 			std::string actual = test.solveLinear_solveEquation("5x-2=3");
 			Assert::AreEqual(expected, actual);
 		}
+		TEST_METHOD(Test_solveLinear_getEquation)
+		{
+			std::string expected = "5x-2=3";
+			Tests test;
+			std::string actual = test.solveLinear_getEquation("5x-2=3");
+			Assert::AreEqual(expected, actual);
+		}
 		//Polygon
 		TEST_METHOD(Test_Polygon_getpolygonsides) {
 			double expected = 3;
@@ -332,6 +339,24 @@ namespace CMathHelpertests
 			Assert::AreEqual(expected, actual, 0.1);
 		}
 
+		TEST_METHOD(Test_Circle_ostreamOperator)
+		{
+			int radius = 10;
+			std::string expected =  "\n\tRadius: ";
+			expected += "10.00";
+			expected +=  "\n\tDiameter: ";
+			expected += "20.00";
+			expected +=  "\n\n\tCircumference: ";
+			expected += "62.83";
+			expected +=  "\n\tArea: ";
+			expected += "314.16";
+			expected +=  "\n\n\tEquation: x^2+y^2=";
+			expected += "10.00";
+			expected +=  "^2"; 
+			std::string actual = Tests::Circle_ostreamOperator(radius);
+			Assert::AreEqual(expected, actual);
+		}
+
 		//Ellipse
 		TEST_METHOD(Test_Ellipse_getellipsemajoraxis)
 		{
@@ -380,6 +405,30 @@ namespace CMathHelpertests
 			double expected = 47.12;
 			double actual = Tests::Ellipse_getellipsearea(majorAxis, minorAxis);
 			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Ellipse_ostreamOperator)
+		{
+			double majorAxis = 5;
+			double minorAxis = 3;
+			std::string expected = "\n\tEllipse Equation: (x^2/";
+			expected += "25.00";
+			expected += ") + (y^2/";
+			expected += "9.00";
+			expected += ") = 1";
+			expected += "\n\n\tMajor Axis: ";
+			expected += "5.00";
+			expected += "\n\tMinor Axis: ";
+			expected += "3.00";
+			expected += "\n\n\tFocal Length: ";
+			expected += "4.00";
+			expected += "\n\tDirectrix Length: ";
+			expected += "6.25";
+			expected += "\n\tVertex Length: ";
+			expected += "5.00";
+			expected += "\n\n\tArea: ";
+			expected += "47.12";
+			std::string actual = Tests::Ellipse_ostreamOperator(majorAxis, minorAxis);
+			Assert::AreEqual(expected, actual);
 		}
 
 		//Cube

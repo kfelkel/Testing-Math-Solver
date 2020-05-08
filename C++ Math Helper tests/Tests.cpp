@@ -19,43 +19,6 @@
 #include <sstream>
 #include <iostream>
 
-//void Tests::runTests() {
-	//AAS
-	// std::cout << "AAS Angle B: " << AASfindangleB() << std::endl;
-	// std::cout << "AAS side a: " << AASfindsidea() << std::endl;
-	// std::cout << "AAS side b: " << AASfindsideb() << std::endl;
-	// //SAS
-	// std::cout << "SAS side a: " << SASfindsidea() << std::endl;
-	// std::cout << "SAS angle B: " << SASfindangleB() << std::endl;
-	// std::cout << "SAS angle C: " << SASfindangleC() << std::endl;
-	// //SSA
-	// std::cout << "SSA angle C: " << SSAfindangleC() << std::endl;
-	// std::cout << "SSA angle A: " << SSAfindangleA() << std::endl;
-	// std::cout << "SSA side a: " << SSAfindsidea() << std::endl;
-	// //SSS
-	// std::cout << "SSS angle A: " << SSSfindangleA() << std::endl;
-	// std::cout << "SSS angle B: " << SSSfindangleB() << std::endl;
-	// std::cout << "SSS angle C: " << SSSfindangleC() << std::endl;
-	// //Triangle
-	// std::cout << "Triangle Getter A: " << TriangleGetterA() << std::endl;
-	// std::cout << "Triangle Getter B: " << TriangleGetterB() << std::endl;
-	// std::cout << "Triangle Getter C: " << TriangleGetterC() << std::endl;
-	// std::cout << "Triangle Getter a: " << TriangleGettera() << std::endl;
-	// std::cout << "Triangle Getter b: " << TriangleGetterb() << std::endl;
-	// std::cout << "Triangle Getter c: " << TriangleGetterc() << std::endl;
-	// std::cout << "Triangle Getter Height a: " << TriangleGetterHeighta() << std::endl;
-	// std::cout << "Triangle Getter Height b: " << TriangleGetterHeightb() << std::endl;
-	// std::cout << "Triangle Getter Height c: " << TriangleGetterHeightc() << std::endl;
-	// std::cout << "Triangle area: " << Trianglearea() << std::endl;
-	// std::cout << "Triangle area: " << Triangleperimeter() << std::endl;
-	// std::cout << "Triangle Height a: " << Trianglefindheighta() << std::endl;
-	// std::cout << "Triangle Height b: " << Trianglefindheightb() << std::endl;
-	// std::cout << "Triangle Height c: " << Trianglefindheightc() << std::endl;
-	// //Rectangle
-	// std::cout << "Rectangle length: " << Rectanglegetlength() << std::endl;
-	// std::cout << "Rectangle width: " << Rectanglegetwidth() << std::endl;
-//}
-
 //AAS
 double Tests::AAS_AASangleB(double angleA, double angleC) {
 	aas::AAS* aas = new aas::AAS;
@@ -345,6 +308,13 @@ std::string Tests::solveLinear_solveEquation(std::string equation) {
 	std::string output = solveLinear.solveEquation();
 	return output;
 }
+
+std::string Tests::solveLinear_getEquation(std::string equation) {
+	solvelinear::solveLinear solveLinear;
+	solveLinear.equation = equation;
+	std::string output = solveLinear.getEquation();
+	return output;
+}
 //Polygon
 double Tests::Polygon_getpolygonsides(double sides) {
 	polygon::Polygon* polygon = new polygon::Polygon;
@@ -361,12 +331,12 @@ double Tests::Polygon_getpolygonlength(double length) {
 	return output;
 }
 double Tests::Polygon_polygonapothem(double sides, double length) {
-	polygon::Polygon* polygon = new polygon::Polygon;
-	polygon->sides = sides;
-	polygon->length = length;
-	polygon->polygonapothem();
-	double output = polygon->getpolygonapothem();
-	delete polygon;
+	polygon::Polygon polygon;
+	std::stringstream input;
+	input << sides << std::endl << length;
+	input >> polygon;
+	polygon.polygonapothem();
+	double output = polygon.getpolygonapothem();
 	return output;
 }
 double Tests::Polygon_polygonradius(double sides, double length) {
@@ -433,6 +403,17 @@ double Tests::Circle_getcirclearea(double radius) {
 	return output;
 }
 
+std::string Tests::Circle_ostreamOperator(double radius) {
+	circle::Circle circ;
+	std::stringstream input;
+	std::stringstream output;
+	input << radius;
+	input >> circ;
+	circ.circlesolve();
+	output << circ;
+	return output.str();
+}
+
 //Ellipse
 double Tests::Ellipse_getellipsemajoraxis(double majorAxis, double minorAxis) {
 	ellipse::Ellipse ellipse(majorAxis, minorAxis);
@@ -473,7 +454,16 @@ double Tests::Ellipse_getellipsearea(double majorAxis, double minorAxis) {
 	double output = ellipse.getellipsearea();
 	return output;
 }
-
+std::string Tests::Ellipse_ostreamOperator(double majorAxis, double minorAxis) {
+	ellipse::Ellipse ellipse;
+	std::stringstream input;
+	std::stringstream output;
+	input << majorAxis << std::endl << minorAxis;
+	input >> ellipse;
+	ellipse.ellipsesolve();
+	output << ellipse;
+	return output.str();
+}
 //Cube
 double Tests::Cube_getcubeheight(double length, double width, double height) {
 	cube::Cube cube(length, width, height);
