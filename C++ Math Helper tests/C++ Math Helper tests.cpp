@@ -565,7 +565,55 @@ namespace CMathHelpertests
 			std::string actual = Tests::Parabola_ostreamOperator(valuea, valueb, valuec);
 			Assert::AreEqual(expected, actual);
 		}
-		 
+
+		//Polygon3D
+		TEST_METHOD(Test_Polygon3D_getpolygon3dheight) {
+			int sides = 6;
+			double length = 5;
+			double height = 10;
+			double expected = 10;
+			double actual = Tests::Polygon3D_getpolygon3dheight(sides, length, height);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Polygon3D_getpolygon3darea) {
+			int sides = 6;
+			double length = 5;
+			double height = 10;
+			double expected = 430;
+			double actual = Tests::Polygon3D_getpolygon3darea(sides, length, height);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Polygon3D_polygonperimeter) {
+			int sides = 6;
+			double length = 5;
+			double height = 10;
+			double expected =  120;
+			double actual = Tests::Polygon3D_getpolygon3dperimeter(sides, length, height);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Polygon3D_polygonvolume) {
+			int sides = 6;
+			double length = 5;
+			double height = 10;
+			double expected = 649.5;
+			double actual = Tests::Polygon3D_getpolygon3dvolume(sides, length, height);
+			Assert::AreEqual(expected, actual, 0.1);
+		}
+		TEST_METHOD(Test_Polygon3D_ostreamOperator) {
+			int sides = 6;
+			double length = 5;
+			double height = 10;
+			std::string expected = "\n\t# of sides: 6";
+			expected += "\n\tLength of sides: 5.00";
+			expected += "\n\tHeight from base: 10.00";
+			expected += "\n\n\tBase Apothem: 4.33";
+			expected += "\n\tBase Radius: 5.00";
+			expected += "\n\n\tArea: 429.90";
+			expected += "\n\tPerimeter: 120.00";
+			expected += "\n\tVolume: 649.52";
+			std::string actual = Tests::Polygon3D_ostreamOperator(sides, length, height);
+			Assert::AreEqual(expected, actual);
+		}
 	};
 		
 }

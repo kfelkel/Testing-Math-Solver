@@ -540,3 +540,31 @@ std::string Tests::Parabola_ostreamOperator(double valuea, double valueb, double
 	returnString = output.str();
 	return returnString;
 }
+
+//Polygon3D
+double Tests::Polygon3D_getpolygon3dheight(int sides, double length, double height) {
+	polygon3d::Polygon3D polygon3d(sides, length, height);
+	return polygon3d.getpolygon3dheight();
+}
+double Tests::Polygon3D_getpolygon3darea(int sides, double length, double height) {
+	polygon3d::Polygon3D polygon3d;
+	std::stringstream input;
+	input << sides << std::endl << length << std::endl << height;
+	input >> polygon3d;
+	return polygon3d.getpolygon3darea();
+}
+double Tests::Polygon3D_getpolygon3dperimeter(int sides, double length, double height) {
+	polygon3d::Polygon3D polygon3d(sides, length, height);
+	return polygon3d.getpolygon3dperimeter();
+}
+double Tests::Polygon3D_getpolygon3dvolume(int sides, double length, double height) {
+	polygon3d::Polygon3D polygon3d(sides, length, height);
+	return polygon3d.getpolygon3dvolume();
+}
+std::string Tests::Polygon3D_ostreamOperator(int sides, double length, double height) {
+	polygon3d::Polygon3D polygon3d(sides, length, height);
+	polygon3d.polygon3dsolve();
+	std::stringstream output; 
+	output << polygon3d;
+	return output.str();
+}

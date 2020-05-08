@@ -41,7 +41,7 @@ public:
 
 	//solveLinear
 	std::string solveLinear_solveEquation(std::string equation);
-	std::string Tests::solveLinear_getEquation(std::string equation);
+	std::string solveLinear_getEquation(std::string equation);
 
 	//Polygon
 	double Polygon_getpolygonsides(double sides);
@@ -64,7 +64,7 @@ public:
 	static double Ellipse_getellipsedirectrix(double majorAxis, double minorAxis);
 	static double Ellipse_getellipsevertex(double majorAxis, double minorAxis);
 	static double Ellipse_getellipsearea(double majorAxis, double minorAxis);
-	static std::string Tests::Ellipse_ostreamOperator(double majorAxis, double minorAxis);
+	static std::string Ellipse_ostreamOperator(double majorAxis, double minorAxis);
 
 	//Cube
 	static double Cube_getcubeheight(double length, double width, double height);
@@ -83,6 +83,12 @@ public:
 	static double Parabola_getparabolafocus(double valuea, double valueb, double valuec);
 	static std::string Parabola_ostreamOperator(double valuea, double valueb, double valuec);
 
+	//Polygon3d
+	static double Polygon3D_getpolygon3dheight(int sides, double length, double height);
+	static double Polygon3D_getpolygon3darea(int sides, double length, double height);
+	static double Polygon3D_getpolygon3dperimeter(int sides, double length, double height);
+	static double Polygon3D_getpolygon3dvolume(int sides, double length, double height);
+	static std::string Polygon3D_ostreamOperator(int sides, double length, double height);
 };
 #endif // Tests_H
 
