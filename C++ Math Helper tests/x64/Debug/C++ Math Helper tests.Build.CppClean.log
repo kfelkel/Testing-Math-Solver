@@ -16,6 +16,7 @@ c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\pyramid.sbr
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\rectangle.sbr
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\sas.sbr
+c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\solvelinear.sbr
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\ssa.sbr
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\sss.sbr
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\tests.sbr
@@ -24,6 +25,7 @@ c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\tests.obj
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\sss.obj
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\ssa.obj
+c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\solvelinear.obj
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\sas.obj
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\rectangle.obj
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\pyramid.obj
@@ -35,10 +37,8 @@ c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\circle.obj
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\c++ math helper tests.obj
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\aas.obj
-c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\solvelinear.sbr
-c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\solvelinear.obj
-c:\users\fire_\documents\programs\c--math-solver\x64\debug\c++ math helper tests.dll
 c:\users\fire_\documents\programs\c--math-solver\x64\debug\c++ math helper tests.ilk
+c:\users\fire_\documents\programs\c--math-solver\x64\debug\c++ math helper tests.dll
 c:\users\fire_\documents\programs\c--math-solver\x64\debug\c++ math helper tests.pdb
 c:\users\fire_\documents\programs\c--math-solver\x64\debug\c++ math helper tests.bsc
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\c++ math.fca023e1.tlog\bscmake.command.1.tlog
@@ -47,7 +47,6 @@ c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\c++ math.fca023e1.tlog\cl.command.1.tlog
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\c++ math.fca023e1.tlog\cl.read.1.tlog
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\c++ math.fca023e1.tlog\cl.write.1.tlog
-c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\c++ math.fca023e1.tlog\link.8824.delete.1.tlog
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\c++ math.fca023e1.tlog\link.command.1.tlog
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\c++ math.fca023e1.tlog\link.read.1.tlog
 c:\users\fire_\documents\programs\c--math-solver\c++ math helper tests\x64\debug\c++ math.fca023e1.tlog\link.write.1.tlog

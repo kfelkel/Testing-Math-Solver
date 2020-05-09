@@ -34,6 +34,13 @@ namespace CMathHelpertests
 			double actual = test.AAS_AASsideb(120, 10, 2);
 			Assert::AreEqual(expected, actual, .1);
 		}
+		TEST_METHOD(Test_AAS_AASsolve)
+		{
+			Tests test;
+			std::string expected = "\n\tSide A: \t3.00\n\tSide B: \t3.00\n\tSide C: \t3.00\n\n\tAngle A: \t60.00\n\tAngle B: \t60.00\n\tAngle C: \t60.00\n\n\tHeight A: \t2.60\n\tHeight B: \t2.60\n\tHeight C: \t2.60\n\n\tArea: \t\t3.90\n\tPerimeter: \t9.00";
+			std::string actual = test.AAS_AASsolve(3, 60, 60);
+			Assert::AreEqual(expected, actual);
+		}
 		TEST_METHOD(Test_SAS_SASsidea)
 		{
 			double expected = 2.1;
@@ -54,6 +61,13 @@ namespace CMathHelpertests
 			Tests test;
 			double actual = test.SAS_SASangleC(4, 2, 3);
 			Assert::AreEqual(expected, actual, .1);
+		}
+		TEST_METHOD(Test_SAS_SASsolve)
+		{
+			Tests test;
+			std::string expected = "\n\tSide A: \t3.00\n\tSide B: \t3.00\n\tSide C: \t3.00\n\n\tAngle A: \t60.00\n\tAngle B: \t60.00\n\tAngle C: \t60.00\n\n\tHeight A: \t2.60\n\tHeight B: \t2.60\n\tHeight C: \t2.60\n\n\tArea: \t\t3.90\n\tPerimeter: \t9.00";
+			std::string actual = test.SAS_SASsolve(3, 3, 60);
+			Assert::AreEqual(expected, actual);
 		}
 		TEST_METHOD(Test_SSA_SSAangleC)
 		{
@@ -76,6 +90,13 @@ namespace CMathHelpertests
 			double actual = test.SSA_SSAsidea(24, 66, 3);
 			Assert::AreEqual(expected, actual, .1);
 		}
+		TEST_METHOD(Test_SSA_SSAsolve)
+		{
+			Tests test;
+			std::string expected = "\n\tSide A: \t3.00\n\tSide B: \t3.00\n\tSide C: \t3.00\n\n\tAngle A: \t60.00\n\tAngle B: \t60.00\n\tAngle C: \t60.00\n\n\tHeight A: \t2.60\n\tHeight B: \t2.60\n\tHeight C: \t2.60\n\n\tArea: \t\t3.90\n\tPerimeter: \t9.00";
+			std::string actual = test.SSA_SSAsolve(3, 3, 60);
+			Assert::AreEqual(expected, actual);
+		}
 		TEST_METHOD(Test_SSS_SSSangleA)
 		{
 			double expected = 28.9;
@@ -96,6 +117,13 @@ namespace CMathHelpertests
 			Tests test;
 			double actual = test.SSS_SSSangleC(2, 3, 4);
 			Assert::AreEqual(expected, actual, .1);
+		}
+		TEST_METHOD(Test_SSS_SSSsolve)
+		{
+			Tests test;
+			std::string expected = "\n\tSide A: \t3.00\n\tSide B: \t3.00\n\tSide C: \t3.00\n\n\tAngle A: \t60.00\n\tAngle B: \t60.00\n\tAngle C: \t60.00\n\n\tHeight A: \t2.60\n\tHeight B: \t2.60\n\tHeight C: \t2.60\n\n\tArea: \t\t3.90\n\tPerimeter: \t9.00";
+			std::string actual = test.SSS_SSSsolve(3, 3, 3);
+			Assert::AreEqual(expected, actual);
 		}
 		TEST_METHOD(Triangle_Triangle_gettriangleangleA)
 		{

@@ -37,7 +37,7 @@ namespace ssa
 			ins >> a.sidec;
 			std::cout << "What is angle B? ";
 			ins >> a.angleB;
-		} while (a.sidea <= 0 || a.sidec <= 0 || a.angleB <= 0);
+		} while (a.sideb <= 0 || a.sidec <= 0 || a.angleB <= 0);
 	}
 }
 

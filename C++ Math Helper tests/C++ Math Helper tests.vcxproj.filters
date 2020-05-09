@@ -66,6 +66,9 @@
     <ClCompile Include="solveLinear.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C++ Math Helper AutomtatedTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">

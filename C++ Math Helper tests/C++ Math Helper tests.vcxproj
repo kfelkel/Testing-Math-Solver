@@ -162,6 +162,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="aas.cpp" />
+    <ClCompile Include="C++ Math Helper AutomtatedTests.cpp" />
     <ClCompile Include="C++ Math Helper tests.cpp" />
     <ClCompile Include="circle.cpp" />
     <ClCompile Include="cube.cpp" />

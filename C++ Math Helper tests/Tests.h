@@ -8,14 +8,18 @@ public:
 	double AAS_AASsidea(double angleA, double angleC, double sidec);
 	double AAS_AASsideb(double angleA, double angleC, double sidec);
 	double SAS_SASsidea(double sideb, double sidec, double angleA);
+	std::string AAS_AASsolve(double sidec, double angleA, double angleC);
 	double SAS_SASangleB(double sidea, double sideb, double sidec);
 	double SAS_SASangleC(double sidea, double sideb, double sidec);
+	std::string SAS_SASsolve(double sideb, double sidec, double angleA);
 	double SSA_SSAangleC(double angleB, double sideb, double sidec);
 	double SSA_SSAangleA(double angleB, double angleC);
 	double SSA_SSAsidea(double angleA, double angleC, double sidec);
+	std::string SSA_SSAsolve(double sideb, double sidec, double angleB);
 	double SSS_SSSangleA(double sidea, double sideb, double sidec);
 	double SSS_SSSangleB(double sidea, double sideb, double sidec);
 	double SSS_SSSangleC(double sidea, double sideb, double sidec);
+	std::string SSS_SSSsolve(double sidea, double sideb, double sidec);
 	//Triangle
 	double Triangle_gettriangleangleA(double angleA);
 	double Triangle_gettriangleangleB(double angleB);

@@ -30,13 +30,9 @@ double Tests::AAS_AASangleB(double angleA, double angleC) {
 	return output;
 }
 double Tests::AAS_AASsidea(double angleA, double angleC, double sidec) {
-	aas::AAS* aas = new aas::AAS;
-	aas->angleA = angleA;
-	aas->angleC = angleC;
-	aas->sidec = sidec;
-	aas->AASsidea();
-	double output = (aas->gettrianglesidea());
-	delete aas;
+	aas::AAS aas(angleA, angleC, sidec);
+	aas.AASsidea();
+	double output = (aas.gettrianglesidea());
 	return output;
 }
 double Tests::AAS_AASsideb(double angleA, double angleC, double sidec) {
@@ -49,15 +45,23 @@ double Tests::AAS_AASsideb(double angleA, double angleC, double sidec) {
 	delete aas;
 	return output;
 }
+std::string Tests::AAS_AASsolve(double sidec, double angleA, double angleC) {
+	std::string returnString;
+	aas::AAS aas;
+	std::stringstream input;
+	input << angleA << std::endl << angleC << std::endl << sidec;
+	input >> aas;
+	aas.AASsolve();
+	std::stringstream output;
+	output << aas;
+	returnString = output.str();
+	return returnString;
+}
 //SAS
 double Tests::SAS_SASsidea(double sideb, double sidec, double angleA) {
-	sas::SAS* sas = new sas::SAS;
-	sas->sideb = sideb;
-	sas->sidec = sidec;
-	sas->angleA = angleA;
-	sas->SASsidea();
-	double output = (sas->gettrianglesidea());
-	delete sas;
+	sas::SAS sas(sideb, sidec, angleA);
+	sas.SASsidea();
+	double output = (sas.gettrianglesidea());
 	return output;
 }
 double Tests::SAS_SASangleB(double sidea, double sideb, double sidec) {
@@ -80,15 +84,24 @@ double Tests::SAS_SASangleC(double sidea, double sideb, double sidec) {
 	delete sas;
 	return output;
 }
+
+std::string Tests::SAS_SASsolve(double sideb, double sidec, double angleA) {
+	std::string returnString;
+	sas::SAS sas;
+	std::stringstream input;
+	input << sideb << std::endl << angleA << std::endl << sidec;
+	input >> sas;
+	sas.SASsolve();
+	std::stringstream output;
+	output << sas;
+	returnString = output.str();
+	return returnString;
+}
 //SSA
 double Tests::SSA_SSAangleC(double angleB, double sideb, double sidec) {
-	ssa::SSA* ssa = new ssa::SSA;
-	ssa->angleB = angleB;
-	ssa->sideb = sideb;
-	ssa->sidec = sidec;
-	ssa->SSAangleC();
-	double output = (ssa->gettriangleangleC());
-	delete ssa;
+	ssa::SSA ssa(sideb,sidec, angleB);
+	ssa.SSAangleC();
+	double output = (ssa.gettriangleangleC());
 	return output;
 }
 double Tests::SSA_SSAangleA(double angleB, double angleC) {
@@ -110,15 +123,23 @@ double Tests::SSA_SSAsidea(double angleA, double angleC, double sidec) {
 	delete ssa;
 	return output;
 }
+std::string Tests::SSA_SSAsolve(double sideb, double sidec, double angleB) {
+	std::string returnString;
+	ssa::SSA ssa;
+	std::stringstream input;
+	input << sideb << std::endl << sidec << std::endl << angleB;
+	input >> ssa;
+	ssa.SSAsolve();
+	std::stringstream output;
+	output << ssa;
+	returnString = output.str();
+	return returnString;
+}
 //SSS
 double Tests::SSS_SSSangleA(double sidea, double sideb, double sidec) {
-	sss::SSS* sss = new sss::SSS;
-	sss->sidea = 2;
-	sss->sideb = 3;
-	sss->sidec = 4;
-	sss->SSSangleA();
-	double output = (sss->gettriangleangleA());
-	delete sss;
+	sss::SSS sss(sidea,sideb,sidec);
+	sss.SSSangleA();
+	double output = (sss.gettriangleangleA());
 	return output;
 }
 double Tests::SSS_SSSangleB(double sidea, double sideb, double sidec) {
@@ -140,6 +161,18 @@ double Tests::SSS_SSSangleC(double sidea, double sideb, double sidec) {
 	double output = (sss->gettriangleangleC());
 	delete sss;
 	return output;
+}
+std::string Tests::SSS_SSSsolve(double sidea, double sideb, double sidec) {
+	std::string returnString;
+	sss::SSS sss;
+	std::stringstream input;
+	input << sidea << std::endl << sideb << std::endl << sidec;
+	input >> sss;
+	sss.SSSsolve();
+	std::stringstream output;
+	output << sss;
+	returnString = output.str();
+	return returnString;
 }
 //Triangle
 double Tests::Triangle_gettriangleangleA(double angleA) {
