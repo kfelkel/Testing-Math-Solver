@@ -3,7 +3,6 @@
 #include <string>
 class Tests {
 public:
-	//void runTests();
 	double AAS_AASangleB(double angleA, double angleC);
 	double AAS_AASsidea(double angleA, double angleC, double sidec);
 	double AAS_AASsideb(double angleA, double angleC, double sidec);
@@ -16,9 +15,9 @@ public:
 	double SSA_SSAangleA(double angleB, double angleC);
 	double SSA_SSAsidea(double angleA, double angleC, double sidec);
 	std::string SSA_SSAsolve(double sideb, double sidec, double angleB);
-	double SSS_SSSangleA(double sidea, double sideb, double sidec);
-	double SSS_SSSangleB(double sidea, double sideb, double sidec);
-	double SSS_SSSangleC(double sidea, double sideb, double sidec);
+	static double SSS_SSSangleA(double sidea, double sideb, double sidec);
+	static double SSS_SSSangleB(double sidea, double sideb, double sidec);
+	static double SSS_SSSangleC(double sidea, double sideb, double sidec);
 	std::string SSS_SSSsolve(double sidea, double sideb, double sidec);
 	//Triangle
 	double Triangle_gettriangleangleA(double angleA);
@@ -39,8 +38,8 @@ public:
 	//Rectangle
 	double Rectangle_getrectanglelength(double length);
 	double Rectangle_getrectanglewidth(double width);
-	double Rectangle_getrectanglearea(double length, double width);
-	double Rectangle_getrectangleperimeter(double length, double width);
+	static double Rectangle_getrectanglearea(double length, double width);
+	static double Rectangle_getrectangleperimeter(double length, double width);
 	std::string Rectangle_ostreamOperator(double length, double width);
 
 	//solveLinear

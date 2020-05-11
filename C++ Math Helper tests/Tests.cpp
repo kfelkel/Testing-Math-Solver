@@ -144,9 +144,9 @@ double Tests::SSS_SSSangleA(double sidea, double sideb, double sidec) {
 }
 double Tests::SSS_SSSangleB(double sidea, double sideb, double sidec) {
 	sss::SSS* sss = new sss::SSS;
-	sss->sidea = 2;
-	sss->sideb = 3;
-	sss->sidec = 4;
+	sss->sidea = sidea;
+	sss->sideb = sideb;
+	sss->sidec = sidec;
 	sss->SSSangleB();
 	double output = (sss->gettriangleangleB());
 	delete sss;
@@ -154,9 +154,9 @@ double Tests::SSS_SSSangleB(double sidea, double sideb, double sidec) {
 }
 double Tests::SSS_SSSangleC(double sidea, double sideb, double sidec) {
 	sss::SSS* sss = new sss::SSS;
-	sss->sidea = 2;
-	sss->sideb = 3;
-	sss->sidec = 4;
+	sss->sidea = sidea;
+	sss->sideb = sideb;
+	sss->sidec = sidec;
 	sss->SSSangleC();
 	double output = (sss->gettriangleangleC());
 	delete sss;
